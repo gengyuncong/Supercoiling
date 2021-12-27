@@ -1,0 +1,50 @@
+/*
+ * Copyright 2012-2019 Johns Hopkins University
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * Developed by: Roberts Group
+ *               Johns Hopkins University
+ *               http://biophysics.jhu.edu/roberts/
+ *
+ * Author(s): Elijah Roberts, Max Klein
+ */
+syntax = "proto2";
+package lm.input;
+
+message OutputOptions {
+
+    // A prefix to use when outputing these data.
+    optional string record_name_prefix = 1;
+
+    // If writing time series data, should we report the first and last states.
+    optional bool write_initial_trajectory_state        = 11 [default = false];
+    optional bool write_final_trajectory_state          = 12 [default = false];
+
+    // Intervals for writing various time series data.
+    optional double species_write_interval              = 21;
+    optional double lattice_write_interval              = 22;
+    optional double concentrations_write_interval       = 23;
+    optional double degree_advancement_write_interval   = 24;
+    optional double order_parameter_write_interval      = 25;
+    optional double stochastic_process_write_interval   = 26;
+
+    // Species and/or order paraemters for which should we track fpts.
+    repeated uint32 fpt_species_to_track                = 32;
+    repeated uint32 fpt_order_parameter_to_track        = 33;
+
+    // Tilings for which we should we track histograms.
+    optional double histogram_begin_time                = 60;
+    optional double histogram_end_time                  = 61;
+    repeated uint32 tiling_to_histogram                 = 62;
+}

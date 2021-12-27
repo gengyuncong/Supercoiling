@@ -1,0 +1,80 @@
+/*
+ * Copyright 2012-2019 Johns Hopkins University
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * Developed by: Roberts Group
+ *               Johns Hopkins University
+ *               http://biophysics.jhu.edu/roberts/
+ *
+ * Author(s): Elijah Roberts, Max Klein
+ */
+
+syntax = "proto2";
+package lm.types;
+
+message TrajectoryLimit {
+
+    required int32 id                           = 1;
+
+    enum LimitType {
+        NONE                                    = 0;
+        TIME                                    = 1;
+        SPECIES                                 = 2;
+        ORDER_PARAMETER                         = 3;
+        DEGREE_ADVANCEMENT                      = 4;
+        BARRIER_CROSSING                        = 5;
+    }
+
+    /*
+     * - limit_type is used in conjunction with limit_type_arg to determine what simulation value will be checked when the limit is invoked
+     *     - limit_type==TIME: limit_type_arg is not used
+     *     - limit_type==SPECIES: limit_type_arg is the index of the species checked
+     *     - limit_type==ORDER_PARAMETER: limit_type_arg is the index of the order parameter value checked
+     *     - limit_type==DEGREE_ADVANCEMENT: limit_type_arg is the index of the reaction count checked
+     *     - limit_type==BARRIER_CROSSING: limit_type_arg is the index of the barrier crossing checked
+     */
+    required LimitType type                   = 21;
+    optional uint32 type_arg                  = 22;
+
+
+    enum StoppingCondition {
+        MIN_EXCLUSIVE           = 0;
+        MIN_INCLUSIVE           = 1;
+        MAX_EXCLUSIVE           = 2;
+        MAX_INCLUSIVE           = 3;
+        DECREASING_EXCLUSIVE    = 4;
+        DECREASING_INCLUSIVE    = 5;
+        INCREASING_EXCLUSIVE    = 6;
+        INCREASING_INCLUSIVE    = 7;
+    }
+
+    /*
+     * - stopping_condition is used in conjunction with include_endpoint to determine the function that is evaluated when this limit is checked
+     *     - The function is chosen according to the table below:
+     *
+     *         | stopping_condition |                EXCLUSIVE                             |                INCLUSIVE                             |
+     *         |--------------------|:----------------------------------------------------:|:----------------------------------------------------:|
+     *         | MIN                |                  value < limit_value                 |                 value <= limit_value                 |
+     *         | MAX                |                  value > limit_value                 |                 value >= limit_value                 |
+     *         | DECREASING         | previous_value >= limit_value && value < limit_value | previous_value > limit_value && value <= limit_value |
+     *         | INCREASING         | previous_value <= limit_value && value > limit_value | previous_value < limit_value && value >= limit_value |
+     */
+    required StoppingCondition stopping_condition   = 11;
+    optional double stopping_value_double           = 12 [default=0.0];
+    optional int64 stopping_value_int               = 13 [default=0];
+}
+
+message TrajectoryLimits {
+    repeated TrajectoryLimit limits                 = 1;
+}

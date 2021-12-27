@@ -1,0 +1,60 @@
+/*
+ * Copyright 2016 Johns Hopkins University
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * Developed by: Roberts Group
+ *               Johns Hopkins University
+ *               http://biophysics.jhu.edu/roberts/
+ *
+ * Author(s): Elijah Roberts, Max Klein
+ */
+
+syntax = "proto2";
+package lm.input;
+
+import "lm/input/CMERestart.proto";
+import "lm/input/DiffusionModel.proto";
+import "lm/input/MicroenvironmentModel.proto";
+import "lm/input/OutputOptions.proto";
+import "lm/input/RDMERestart.proto";
+import "lm/input/ReactionModel.proto";
+import "lm/input/SimulationOptions.proto";
+import "lm/input/ffpilot/FFPilotOptions.proto";
+import "lm/types/OrderParameters.proto";
+import "lm/types/Tilings.proto";
+
+message Input {
+
+    /** options */
+    optional SimulationOptions simulation_options               = 1;
+    optional OutputOptions output_options                       = 2;
+
+    /** models */
+    optional ReactionModel reaction_model                       = 10;
+    optional DiffusionModel diffusion_model                     = 11;
+    optional MicroenvironmentModel microenv_model               = 12;
+
+    /** type definitions */
+    optional lm.types.OrderParameters order_parameters          = 100;
+    optional lm.types.Tilings tilings                           = 101;
+
+    /** input specific to ffpilot simulations */
+    optional lm.input.ffpilot.FFPilotOptions ffpilot_options    = 200;
+
+    /**
+     * Restart options.
+     */
+    optional lm.input.CMERestart cme_restart                    = 1000;
+    optional lm.input.RDMERestart rdme_restart                  = 1001;
+}

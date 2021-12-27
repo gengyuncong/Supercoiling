@@ -1,0 +1,246 @@
+Lattice Microbe ES v2019.01 Release build 2019-01-22-13-03-33 in 64-bit mode with options AVX CPP11 FMA SBML SNAPPY.
+Copyright (C) 2012-2019 Roberts Group, Johns Hopkins University.
+Copyright (C) 2008-2012 Luthey-Schulten Group, University of Illinois at Urbana-Champaign.
+
+2019-01-22 13:23:22) Saving simulation output to  using lm::io::NullOutputWriter.
+2019-01-22 13:23:22) Initializing communications library.
+2019-01-22 13:23:22) Using local communicator on host BPH-ER-Spectre1.
+2019-01-22 13:23:22) Created a resource map using localhost BPH-ER-Spectre1: 1 hosts allocated, 0 hosts registered
+2019-01-22 13:23:22) Resource controller @1 started.
+2019-01-22 13:23:22) Loading simulation input from perf/perf.99.latest/first_order_birth_death.lm using lm::io::hdf5::Hdf5InputReader.
+simulation_options {
+  time_limit: 100000
+}
+output_options {
+  species_write_interval: 10000
+  concentrations_write_interval: 10000
+}
+reaction_model {
+  number_species: 1
+  number_reactions: 2
+  initial_species_count: 2000
+  reaction {
+    type: 0
+    rate_constant: 1000
+  }
+  reaction {
+    type: 1
+    rate_constant: 1
+  }
+  stoichiometric_matrix: 1
+  stoichiometric_matrix: -1
+  dependency_matrix: 0
+  dependency_matrix: 1
+}
+2019-01-22 13:23:22) Hypervisor @0 of type lm::simulation::SimpleHypervisor started.
+2019-01-22 13:23:22) Resource controller @1 on BPH-ER-Spectre1 reported 8 cpu core(s) and 0 gpu device(s). 0 hosts registered, 1 hosts remaining.
+2019-01-22 13:23:22) Registered resources for host BPH-ER-Spectre1 (defaults=1): 2 cpu cores, 0 gpu devices
+2019-01-22 13:23:22) All resources registered with hypervisor, starting workers.
+2019-01-22 13:23:22) Reserved core 0 on @1 for the output writer.
+2019-01-22 13:23:22) Creating slot 0 on @1 using resources: BPH-ER-Spectre1:c=1.
+2019-01-22 13:23:22) OutputWriter @3 started.
+2019-01-22 13:23:22) OutputPerformanceSignaler @4 started, writing performance statistics every 60 seconds.
+2019-01-22 13:23:22) Output performance signaller started: @4.
+2019-01-22 13:23:22) Output writer started: @3.
+2019-01-22 13:23:22) OutputWriter::HelperThread @3 started.
+2019-01-22 13:23:22) Work Unit runner @5 started with 1 cpu cores (affinity=0) and 0 gpus.
+2019-01-22 13:23:22) Work unit runner started: @5.
+2019-01-22 13:23:22) All hypervisor workers have started, beginning job.
+2019-01-22 13:23:22) Job started.
+2019-01-22 13:23:22) Supervisor @6 of type lm::replicates::ReplicateSupervisor started.
+2019-01-22 13:23:22) Replicate supervisor started.
+2019-01-22 13:23:22) Running next reaction simulation with 1 species, 2 reactions, 1 limits.
+2019-01-22 13:23:28) Running next reaction simulation with 1 species, 2 reactions, 1 limits.
+2019-01-22 13:23:34) Running next reaction simulation with 1 species, 2 reactions, 1 limits.
+2019-01-22 13:23:40) Running next reaction simulation with 1 species, 2 reactions, 1 limits.
+2019-01-22 13:23:46) Running next reaction simulation with 1 species, 2 reactions, 1 limits.
+2019-01-22 13:23:52) Running next reaction simulation with 1 species, 2 reactions, 1 limits.
+2019-01-22 13:23:58) Running next reaction simulation with 1 species, 2 reactions, 1 limits.
+2019-01-22 13:24:04) Running next reaction simulation with 1 species, 2 reactions, 1 limits.
+2019-01-22 13:24:11) Running next reaction simulation with 1 species, 2 reactions, 1 limits.
+2019-01-22 13:24:17) Running next reaction simulation with 1 species, 2 reactions, 1 limits.
+2019-01-22 13:24:21) ========================================================================================================================
+2019-01-22 13:24:21) Performance statistics.
+2019-01-22 13:24:21) Supervisor @6 finished 9 work units (ids in range 0 to 9) with 9 parts in the last interval. 900000000 steps in 5.446e+01 seconds (1.653e+07 steps/second).
+2019-01-22 13:24:21) Replicate status: 0 aborted, 0 finished, 1 running, 14 waiting
+2019-01-22 13:24:21)         Id       State      Time Work_Units
+2019-01-22 13:24:21) -------------------------------------------
+2019-01-22 13:24:21)          1     WAITING 5.000e+04          1
+2019-01-22 13:24:21)          2     WAITING 5.000e+04          1
+2019-01-22 13:24:21)          3     WAITING 4.999e+04          1
+2019-01-22 13:24:21)          4     WAITING 5.000e+04          1
+2019-01-22 13:24:21)          5     WAITING 5.000e+04          1
+2019-01-22 13:24:21)          6     WAITING 5.000e+04          1
+2019-01-22 13:24:21)          7     WAITING 5.001e+04          1
+2019-01-22 13:24:21)          8     WAITING 5.000e+04          1
+2019-01-22 13:24:21)          9     WAITING 5.000e+04          1
+2019-01-22 13:24:21)         10     RUNNING 0.000e+00          0
+2019-01-22 13:24:21)         11 NOT_STARTED 0.000e+00          0
+2019-01-22 13:24:21)         12 NOT_STARTED 0.000e+00          0
+2019-01-22 13:24:21)         13 NOT_STARTED 0.000e+00          0
+2019-01-22 13:24:21)         14 NOT_STARTED 0.000e+00          0
+2019-01-22 13:24:21)         15 NOT_STARTED 0.000e+00          0
+2019-01-22 13:24:21) Slot status
+2019-01-22 13:24:21)  Slot                                Resources Address  ME_Work_Units           Steps      Time Steps/Sec PDE_Work_Units           Steps      Time Steps/Sec
+2019-01-22 13:24:21) ------------------------------------------------------------------------------------------------------------------------------------------------------------
+2019-01-22 13:24:21)     0                      BPH-ER-Spectre1:c=1      @5              9       900000000 5.446e+01 1.653e+07              0               0 0.000e+00      -nan
+2019-01-22 13:24:21) OutputWriter wrote 9 messages (972 bytes) in the last 59.2 seconds (0.000004 seconds writing). 0 messages (0 bytes) queued.
+2019-01-22 13:24:23) Running next reaction simulation with 1 species, 2 reactions, 1 limits.
+2019-01-22 13:24:34) Running next reaction simulation with 1 species, 2 reactions, 1 limits.
+2019-01-22 13:25:21) ========================================================================================================================
+2019-01-22 13:25:21) Performance statistics.
+2019-01-22 13:25:21) Supervisor @6 finished 2 work units (ids in range 10 to 11) with 2 parts in the last interval. 200000000 steps in 1.686e+01 seconds (1.186e+07 steps/second).
+2019-01-22 13:25:21) Replicate status: 0 aborted, 0 finished, 1 running, 14 waiting
+2019-01-22 13:25:21)         Id       State      Time Work_Units
+2019-01-22 13:25:21) -------------------------------------------
+2019-01-22 13:25:21)          1     WAITING 5.000e+04          1
+2019-01-22 13:25:21)          2     WAITING 5.000e+04          1
+2019-01-22 13:25:21)          3     WAITING 4.999e+04          1
+2019-01-22 13:25:21)          4     WAITING 5.000e+04          1
+2019-01-22 13:25:21)          5     WAITING 5.000e+04          1
+2019-01-22 13:25:21)          6     WAITING 5.000e+04          1
+2019-01-22 13:25:21)          7     WAITING 5.001e+04          1
+2019-01-22 13:25:21)          8     WAITING 5.000e+04          1
+2019-01-22 13:25:21)          9     WAITING 5.000e+04          1
+2019-01-22 13:25:21)         10     WAITING 5.000e+04          1
+2019-01-22 13:25:21)         11     WAITING 5.000e+04          1
+2019-01-22 13:25:21)         12     RUNNING 0.000e+00          0
+2019-01-22 13:25:21)         13 NOT_STARTED 0.000e+00          0
+2019-01-22 13:25:21)         14 NOT_STARTED 0.000e+00          0
+2019-01-22 13:25:21)         15 NOT_STARTED 0.000e+00          0
+2019-01-22 13:25:21) Slot status
+2019-01-22 13:25:21)  Slot                                Resources Address  ME_Work_Units           Steps      Time Steps/Sec PDE_Work_Units           Steps      Time Steps/Sec
+2019-01-22 13:25:21) ------------------------------------------------------------------------------------------------------------------------------------------------------------
+2019-01-22 13:25:21)     0                      BPH-ER-Spectre1:c=1      @5             11      1100000000 7.132e+01 1.542e+07              0               0 0.000e+00      -nan
+2019-01-22 13:25:21) OutputWriter wrote 2 messages (215 bytes) in the last 60.0 seconds (0.000003 seconds writing). 0 messages (0 bytes) queued.
+2019-01-22 13:25:49) Running next reaction simulation with 1 species, 2 reactions, 1 limits.
+2019-01-22 13:26:09) Running next reaction simulation with 1 species, 2 reactions, 1 limits.
+2019-01-22 13:26:20) Running next reaction simulation with 1 species, 2 reactions, 1 limits.
+2019-01-22 13:26:21) ========================================================================================================================
+2019-01-22 13:26:21) Performance statistics.
+2019-01-22 13:26:21) Supervisor @6 finished 3 work units (ids in range 12 to 14) with 3 parts in the last interval. 300000000 steps in 1.064e+02 seconds (2.819e+06 steps/second).
+2019-01-22 13:26:21) Replicate status: 0 aborted, 0 finished, 1 running, 14 waiting
+2019-01-22 13:26:21)         Id       State      Time Work_Units
+2019-01-22 13:26:21) -------------------------------------------
+2019-01-22 13:26:21)          1     WAITING 5.000e+04          1
+2019-01-22 13:26:21)          2     WAITING 5.000e+04          1
+2019-01-22 13:26:21)          3     WAITING 4.999e+04          1
+2019-01-22 13:26:21)          4     WAITING 5.000e+04          1
+2019-01-22 13:26:21)          5     WAITING 5.000e+04          1
+2019-01-22 13:26:21)          6     WAITING 5.000e+04          1
+2019-01-22 13:26:21)          7     WAITING 5.001e+04          1
+2019-01-22 13:26:21)          8     WAITING 5.000e+04          1
+2019-01-22 13:26:21)          9     WAITING 5.000e+04          1
+2019-01-22 13:26:21)         10     WAITING 5.000e+04          1
+2019-01-22 13:26:21)         11     WAITING 5.000e+04          1
+2019-01-22 13:26:21)         12     WAITING 4.998e+04          1
+2019-01-22 13:26:21)         13     WAITING 5.001e+04          1
+2019-01-22 13:26:21)         14     WAITING 5.002e+04          1
+2019-01-22 13:26:21)         15     RUNNING 0.000e+00          0
+2019-01-22 13:26:21) Slot status
+2019-01-22 13:26:21)  Slot                                Resources Address  ME_Work_Units           Steps      Time Steps/Sec PDE_Work_Units           Steps      Time Steps/Sec
+2019-01-22 13:26:21) ------------------------------------------------------------------------------------------------------------------------------------------------------------
+2019-01-22 13:26:21)     0                      BPH-ER-Spectre1:c=1      @5             14      1400000000 1.777e+02 7.876e+06              0               0 0.000e+00      -nan
+2019-01-22 13:26:21) OutputWriter wrote 3 messages (327 bytes) in the last 60.0 seconds (0.000003 seconds writing). 0 messages (0 bytes) queued.
+2019-01-22 13:26:26) Running next reaction simulation with 1 species, 2 reactions, 1 limits.
+2019-01-22 13:26:32) Running next reaction simulation with 1 species, 2 reactions, 1 limits.
+2019-01-22 13:26:38) Running next reaction simulation with 1 species, 2 reactions, 1 limits.
+2019-01-22 13:26:44) Running next reaction simulation with 1 species, 2 reactions, 1 limits.
+2019-01-22 13:26:50) Running next reaction simulation with 1 species, 2 reactions, 1 limits.
+2019-01-22 13:26:56) Running next reaction simulation with 1 species, 2 reactions, 1 limits.
+2019-01-22 13:27:02) Replicate 15 completed with 1.00e+05 of simulation time using 2 work units.
+2019-01-22 13:27:02) Running next reaction simulation with 1 species, 2 reactions, 1 limits.
+2019-01-22 13:27:08) Replicate 2 completed with 1.00e+05 of simulation time using 2 work units.
+2019-01-22 13:27:08) Running next reaction simulation with 1 species, 2 reactions, 1 limits.
+2019-01-22 13:27:14) Replicate 1 completed with 1.00e+05 of simulation time using 2 work units.
+2019-01-22 13:27:14) Running next reaction simulation with 1 species, 2 reactions, 1 limits.
+2019-01-22 13:27:21) Replicate 6 completed with 1.00e+05 of simulation time using 2 work units.
+2019-01-22 13:27:21) Running next reaction simulation with 1 species, 2 reactions, 1 limits.
+2019-01-22 13:27:21) ========================================================================================================================
+2019-01-22 13:27:21) Performance statistics.
+2019-01-22 13:27:21) Supervisor @6 finished 10 work units (ids in range 15 to 24) with 10 parts in the last interval. 999965489 steps in 6.045e+01 seconds (1.654e+07 steps/second).
+2019-01-22 13:27:21) Replicate status: 0 aborted, 4 finished, 1 running, 10 waiting
+2019-01-22 13:27:21)         Id       State      Time Work_Units
+2019-01-22 13:27:21) -------------------------------------------
+2019-01-22 13:27:21)          1    FINISHED 1.000e+05          2
+2019-01-22 13:27:21)          2    FINISHED 1.000e+05          2
+2019-01-22 13:27:21)          3     WAITING 1.000e+05          2
+2019-01-22 13:27:21)          4     WAITING 5.000e+04          1
+2019-01-22 13:27:21)          5     RUNNING 5.000e+04          1
+2019-01-22 13:27:21)          6    FINISHED 1.000e+05          2
+2019-01-22 13:27:21)          7     WAITING 5.001e+04          1
+2019-01-22 13:27:21)          8     WAITING 9.999e+04          2
+2019-01-22 13:27:21)          9     WAITING 9.999e+04          2
+2019-01-22 13:27:21)         10     WAITING 5.000e+04          1
+2019-01-22 13:27:21)         11     WAITING 1.000e+05          2
+2019-01-22 13:27:21)         12     WAITING 9.998e+04          2
+2019-01-22 13:27:21)         13     WAITING 5.001e+04          1
+2019-01-22 13:27:21)         14     WAITING 5.002e+04          1
+2019-01-22 13:27:21)         15    FINISHED 1.000e+05          2
+2019-01-22 13:27:21) Slot status
+2019-01-22 13:27:21)  Slot                                Resources Address  ME_Work_Units           Steps      Time Steps/Sec PDE_Work_Units           Steps      Time Steps/Sec
+2019-01-22 13:27:21) ------------------------------------------------------------------------------------------------------------------------------------------------------------
+2019-01-22 13:27:21)     0                      BPH-ER-Spectre1:c=1      @5             24      2399965489 2.382e+02 1.008e+07              0               0 0.000e+00      -nan
+2019-01-22 13:27:21) OutputWriter wrote 10 messages (1093 bytes) in the last 60.0 seconds (0.000017 seconds writing). 0 messages (0 bytes) queued.
+2019-01-22 13:27:38) Running next reaction simulation with 1 species, 2 reactions, 1 limits.
+2019-01-22 13:28:21) ========================================================================================================================
+2019-01-22 13:28:21) Performance statistics.
+2019-01-22 13:28:21) Supervisor @6 finished 1 work units (ids in range 25 to 25) with 1 parts in the last interval. 100000000 steps in 1.710e+01 seconds (5.847e+06 steps/second).
+2019-01-22 13:28:21) Replicate status: 0 aborted, 4 finished, 1 running, 10 waiting
+2019-01-22 13:28:21)         Id       State      Time Work_Units
+2019-01-22 13:28:21) -------------------------------------------
+2019-01-22 13:28:21)          1    FINISHED 1.000e+05          2
+2019-01-22 13:28:21)          2    FINISHED 1.000e+05          2
+2019-01-22 13:28:21)          3     WAITING 1.000e+05          2
+2019-01-22 13:28:21)          4     RUNNING 5.000e+04          1
+2019-01-22 13:28:21)          5     WAITING 9.999e+04          2
+2019-01-22 13:28:21)          6    FINISHED 1.000e+05          2
+2019-01-22 13:28:21)          7     WAITING 5.001e+04          1
+2019-01-22 13:28:21)          8     WAITING 9.999e+04          2
+2019-01-22 13:28:21)          9     WAITING 9.999e+04          2
+2019-01-22 13:28:21)         10     WAITING 5.000e+04          1
+2019-01-22 13:28:21)         11     WAITING 1.000e+05          2
+2019-01-22 13:28:21)         12     WAITING 9.998e+04          2
+2019-01-22 13:28:21)         13     WAITING 5.001e+04          1
+2019-01-22 13:28:21)         14     WAITING 5.002e+04          1
+2019-01-22 13:28:21)         15    FINISHED 1.000e+05          2
+2019-01-22 13:28:21) Slot status
+2019-01-22 13:28:21)  Slot                                Resources Address  ME_Work_Units           Steps      Time Steps/Sec PDE_Work_Units           Steps      Time Steps/Sec
+2019-01-22 13:28:21) ------------------------------------------------------------------------------------------------------------------------------------------------------------
+2019-01-22 13:28:21)     0                      BPH-ER-Spectre1:c=1      @5             25      2499965489 2.553e+02 9.792e+06              0               0 0.000e+00      -nan
+2019-01-22 13:28:21) OutputWriter wrote 1 messages (99 bytes) in the last 60.0 seconds (0.000002 seconds writing). 0 messages (0 bytes) queued.
+2019-01-22 13:28:38) Replicate 4 completed with 1.00e+05 of simulation time using 2 work units.
+2019-01-22 13:28:38) Running next reaction simulation with 1 species, 2 reactions, 1 limits.
+2019-01-22 13:28:52) Replicate 10 completed with 1.00e+05 of simulation time using 2 work units.
+2019-01-22 13:28:52) Running next reaction simulation with 1 species, 2 reactions, 1 limits.
+2019-01-22 13:29:02) Replicate 13 completed with 1.00e+05 of simulation time using 2 work units.
+2019-01-22 13:29:02) Running next reaction simulation with 1 species, 2 reactions, 1 limits.
+2019-01-22 13:29:08) Running next reaction simulation with 1 species, 2 reactions, 1 limits.
+2019-01-22 13:29:14) Replicate 14 completed with 1.00e+05 of simulation time using 2 work units.
+2019-01-22 13:29:14) Running next reaction simulation with 1 species, 2 reactions, 1 limits.
+2019-01-22 13:29:14) Replicate 12 completed with 1.00e+05 of simulation time using 3 work units.
+2019-01-22 13:29:14) Running next reaction simulation with 1 species, 2 reactions, 1 limits.
+2019-01-22 13:29:14) Replicate 8 completed with 1.00e+05 of simulation time using 3 work units.
+2019-01-22 13:29:14) Running next reaction simulation with 1 species, 2 reactions, 1 limits.
+2019-01-22 13:29:14) Replicate 5 completed with 1.00e+05 of simulation time using 3 work units.
+2019-01-22 13:29:14) Running next reaction simulation with 1 species, 2 reactions, 1 limits.
+2019-01-22 13:29:14) Replicate 9 completed with 1.00e+05 of simulation time using 3 work units.
+2019-01-22 13:29:14) Running next reaction simulation with 1 species, 2 reactions, 1 limits.
+2019-01-22 13:29:14) Replicate 3 completed with 1.00e+05 of simulation time using 3 work units.
+2019-01-22 13:29:14) Running next reaction simulation with 1 species, 2 reactions, 1 limits.
+2019-01-22 13:29:14) Replicate 7 completed with 1.00e+05 of simulation time using 3 work units.
+2019-01-22 13:29:14) Running next reaction simulation with 1 species, 2 reactions, 1 limits.
+2019-01-22 13:29:14) Replicate 11 completed with 1.00e+05 of simulation time using 3 work units.
+2019-01-22 13:29:14) Replicate supervisor finished 15 replicates in 3.515e+02 seconds.
+2019-01-22 13:29:14) Job finished.
+2019-01-22 13:29:14) Supervisor @6 finished.
+2019-01-22 13:29:14) Hypervisor @0 finished.
+2019-01-22 13:29:14) Work unit runner @5 finished.
+2019-01-22 13:29:14) OutputPerformanceSignaler @4 finished.
+2019-01-22 13:29:14) OutputWriter wrote 37 messages and 3713 bytes total.
+2019-01-22 13:29:14) OutputWriter::HelperThread @3 finished.
+2019-01-22 13:29:14) OutputWriter @3 flushing and closing.
+2019-01-22 13:29:14) OutputWriter @3 finished.
+2019-01-22 13:29:14) Resource controller @1 finished.
+2019-01-22 13:29:14) Finalizing communications library.
+2019-01-22 13:29:14) Program execution finished.

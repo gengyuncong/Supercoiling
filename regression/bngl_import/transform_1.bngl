@@ -1,0 +1,26 @@
+begin model
+
+begin parameters
+end parameters
+
+begin molecule types
+  A(b1)
+  K(b1,p1~p~n,p2~p~n)
+  T()
+  D()
+end molecule types
+
+begin species
+  K(b1,p1~n,p2~n)		0
+  T()					0
+  D()					0
+end species
+
+begin reaction rules
+
+  # One substrate transformed and one destroyed with a new product created.
+  K(p1~n) + T() <-> K(p1~p) + D()	1.0, 1.0
+
+end reaction rules
+
+end model

@@ -1,0 +1,23 @@
+begin model
+
+begin parameters
+end parameters
+
+begin molecule types
+  A(p1~p~n)
+  B(p1~p~n)
+end molecule types
+
+begin species
+  A(p1~p)		0
+  B(p1~n)   0
+end species
+
+begin reaction rules
+
+  # Two substrates each transformed, reversible.
+  A(p1~p) + B(p1~n) <-> A(p1~n) + B(p1~p)  1.0,1.0
+
+end reaction rules
+
+end model

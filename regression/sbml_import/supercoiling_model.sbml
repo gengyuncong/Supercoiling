@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sbml xmlns="http://www.sbml.org/sbml/level3/version1/core" level="3" version="1">
+    <model id="self_regulating_gene" substanceUnits="item" timeUnits="second" volumeUnits="litre" extentUnits="item">
+        <listOfUnitDefinitions>
+            <unitDefinition id="per_second">
+                <listOfUnits>
+                    <unit kind="second" exponent="-1" scale="0" multiplier="1"/>
+                </listOfUnits>
+            </unitDefinition>
+        </listOfUnitDefinitions>
+        <listOfCompartments>
+            <compartment id="V" size="1e-15" spatialDimensions="3" constant="true"/>
+        </listOfCompartments>
+        <listOfSpecies>
+            <species id="RNAP"  compartment="V" initialAmount="1" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false"/>
+            <species id="RNAP_stall"  compartment="V" initialAmount="1" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false"/>
+            <species id="RNAP_p1"  compartment="V" initialAmount="1" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false"/>
+            <species id="step"  compartment="V" initialAmount="1" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false"/>
+            <species id="Ncoil_m1"  compartment="V" initialAmount="1" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false"/>
+            <species id="Pcoil_m1"  compartment="V" initialAmount="1" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false"/>
+            <species id="Ncoil_p1"  compartment="V" initialAmount="1" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false"/>
+            <species id="Pcoil_p1"  compartment="V" initialAmount="1" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false"/>
+        </listOfSpecies>
+        <listOfReactions>
+        
+            <reaction id="elongation" reversible="false" fast="false">
+                <listOfReactants>
+                    <speciesReference species="RNAP" stoichiometry="1" constant="true"/>
+                </listOfReactants>
+                <listOfProducts>
+                    <speciesReference species="RNAP" stoichiometry="1" constant="true"/>
+                    <speciesReference species="step" stoichiometry="1" constant="true"/>
+                </listOfProducts>
+                <kineticLaw>
+                    <math xmlns="http://www.w3.org/1998/Math/MathML">
+                        <apply>
+                            <times/>
+                            <cn> 1 </cn>
+                            <ci> RNAP </ci>
+                        </apply>
+                    </math>
+                </kineticLaw>
+            </reaction>
+            
+            <reaction id="translocation" reversible="false" fast="false">
+                <listOfReactants>
+                    <speciesReference species="RNAP" stoichiometry="60" constant="true"/>
+                    <speciesReference species="step" stoichiometry="1" constant="true"/>
+                </listOfReactants>
+                <listOfProducts>
+                    <speciesReference species="RNAP_p1" stoichiometry="1" constant="true"/>
+                </listOfProducts>
+                <kineticLaw>
+                    <math xmlns="http://www.w3.org/1998/Math/MathML">
+                        <apply>
+                            <times/>
+                            <cn> 10000000000 </cn>
+                            <ci> RNAP </ci>
+                            <apply>
+                                <power/>
+                                <ci> step </ci>
+                                <cn> 60 </cn>
+                            </apply>
+                        </apply>
+                    </math>
+                </kineticLaw>
+            </reaction>
+
+            <reaction id="stall" reversible="false" fast="false">
+                <listOfReactants>
+                    <speciesReference species="RNAP" stoichiometry="1" constant="true"/>
+                    <speciesReference species="Ncoil_m1" stoichiometry="1" constant="true"/>
+                    <speciesReference species="Pcoil_m1" stoichiometry="1" constant="true"/>
+                    <speciesReference species="Ncoil_p1" stoichiometry="1" constant="true"/>
+                    <speciesReference species="Pcoil_p1" stoichiometry="1" constant="true"/>
+                </listOfReactants>
+                <listOfProducts>
+                    <speciesReference species="RNAP_stall" stoichiometry="1" constant="true"/>
+                    <speciesReference species="Ncoil_m1" stoichiometry="1" constant="true"/>
+                    <speciesReference species="Pcoil_m1" stoichiometry="1" constant="true"/>
+                    <speciesReference species="Ncoil_p1" stoichiometry="1" constant="true"/>
+                    <speciesReference species="Pcoil_p1" stoichiometry="1" constant="true"/>
+                </listOfProducts>
+                <kineticLaw metaid="RNAPStallPropensity">
+                    <listOfLocalParameters>
+                        <localParameter id="sigmaConversion" value="0.01"/>
+                        <localParameter id="torqueDomainBoundary0" value="0.008"/>
+                        <localParameter id="torqueDomainBoundary1" value="0.02"/>
+                        <localParameter id="torqueValue0" value="445.56"/>
+                        <localParameter id="torqueValue1" value="3.56"/>
+                        <localParameter id="torqueValue2" value="173.6"/>
+                        <localParameter id="stallCutoff" value="18.5"/>
+                    </listOfLocalParameters>
+                </kineticLaw>
+            </reaction>
+
+            <reaction id="resume" reversible="false" fast="false">
+                <listOfReactants>
+                    <speciesReference species="RNAP_stall" stoichiometry="1" constant="true"/>
+                    <speciesReference species="Ncoil_m1" stoichiometry="1" constant="true"/>
+                    <speciesReference species="Pcoil_m1" stoichiometry="1" constant="true"/>
+                    <speciesReference species="Ncoil_p1" stoichiometry="1" constant="true"/>
+                    <speciesReference species="Pcoil_p1" stoichiometry="1" constant="true"/>
+                </listOfReactants>
+                <listOfProducts>
+                    <speciesReference species="RNAP" stoichiometry="1" constant="true"/>
+                    <speciesReference species="Ncoil_m1" stoichiometry="1" constant="true"/>
+                    <speciesReference species="Pcoil_m1" stoichiometry="1" constant="true"/>
+                    <speciesReference species="Ncoil_p1" stoichiometry="1" constant="true"/>
+                    <speciesReference species="Pcoil_p1" stoichiometry="1" constant="true"/>
+                </listOfProducts>
+                <kineticLaw metaid="RNAPResumePropensity">
+                    <listOfLocalParameters>
+                        <localParameter id="sigmaConversion" value="0.01"/>
+                        <localParameter id="torqueDomainBoundary0" value="0.008"/>
+                        <localParameter id="torqueDomainBoundary1" value="0.02"/>
+                        <localParameter id="torqueValue0" value="445.56"/>
+                        <localParameter id="torqueValue1" value="3.56"/>
+                        <localParameter id="torqueValue2" value="173.6"/>
+                        <localParameter id="stallCutoff" value="18.5"/>
+                    </listOfLocalParameters>
+                </kineticLaw>
+            </reaction>
+
+        </listOfReactions>
+    </model>
+</sbml>

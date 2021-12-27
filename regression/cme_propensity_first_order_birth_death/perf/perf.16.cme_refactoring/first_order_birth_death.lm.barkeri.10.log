@@ -1,0 +1,157 @@
+Lattice Microbe ES v2019.01 Release build 2019-01-22-09-31-00 in 64-bit mode with options AVX CPP11 SBML SNAPPY.
+Copyright (C) 2012-2019 Roberts Group, Johns Hopkins University.
+Copyright (C) 2008-2012 Luthey-Schulten Group, University of Illinois at Urbana-Champaign.
+
+2019-01-22 10:03:46) Saving simulation output to  using lm::io::NullOutputWriter.
+2019-01-22 10:03:46) Initializing communications library.
+2019-01-22 10:03:46) Using local communicator on host barkeri.local.
+2019-01-22 10:03:46) Created a resource map using localhost barkeri.local: 1 hosts allocated, 0 hosts registered
+2019-01-22 10:03:46) Resource controller @1 started.
+2019-01-22 10:03:46) Loading simulation input from perf/perf.99.latest/first_order_birth_death.lm using lm::io::hdf5::Hdf5InputReader.
+simulation_options {
+  time_limit: 100000
+}
+output_options {
+  species_write_interval: 10000
+  concentrations_write_interval: 10000
+}
+reaction_model {
+  number_species: 1
+  number_reactions: 2
+  initial_species_count: 2000
+  reaction {
+    type: 0
+    rate_constant: 1000
+  }
+  reaction {
+    type: 1
+    rate_constant: 1
+  }
+  stoichiometric_matrix: 1
+  stoichiometric_matrix: -1
+  dependency_matrix: 0
+  dependency_matrix: 1
+}
+2019-01-22 10:03:46) Hypervisor @0 of type lm::simulation::SimpleHypervisor started.
+2019-01-22 10:03:46) Resource controller @1 on barkeri.local reported 8 cpu core(s) and 0 gpu device(s). 0 hosts registered, 1 hosts remaining.
+2019-01-22 10:03:46) Registered resources for host barkeri.local (defaults=1): 2 cpu cores, 0 gpu devices
+2019-01-22 10:03:46) All resources registered with hypervisor, starting workers.
+2019-01-22 10:03:46) Reserved core 0 on @1 for the output writer.
+2019-01-22 10:03:46) OutputWriter @3 started.
+2019-01-22 10:03:46) OutputPerformanceSignaler @4 started, writing performance statistics every 60 seconds.
+2019-01-22 10:03:46) Creating slot 0 on @1 using resources: barkeri.local:c=1.
+2019-01-22 10:03:46) OutputWriter::HelperThread @3 started.
+2019-01-22 10:03:46) Output performance signaller started: @4.
+2019-01-22 10:03:46) Output writer started: @3.
+2019-01-22 10:03:46) Work Unit runner @5 started with 1 cpu cores (affinity=0) and 0 gpus.
+2019-01-22 10:03:46) Work unit runner started: @5.
+2019-01-22 10:03:46) All hypervisor workers have started, beginning job.
+2019-01-22 10:03:46) Job started.
+2019-01-22 10:03:46) Supervisor @6 of type lm::replicates::ReplicateSupervisor started.
+2019-01-22 10:03:46) Replicate supervisor started.
+2019-01-22 10:04:46) ========================================================================================================================
+2019-01-22 10:04:46) Performance statistics.
+2019-01-22 10:04:46) Supervisor @6 finished 9 work units (ids in range 0 to 9) with 9 parts in the last interval. 900000000 steps in 5.767e+01 seconds (1.561e+07 steps/second).
+2019-01-22 10:04:46) Replicate status: 0 aborted, 0 finished, 1 running, 14 waiting
+2019-01-22 10:04:46)         Id       State      Time Work_Units
+2019-01-22 10:04:46) -------------------------------------------
+2019-01-22 10:04:46)          1     WAITING 4.999e+04          1
+2019-01-22 10:04:46)          2     WAITING 4.999e+04          1
+2019-01-22 10:04:46)          3     WAITING 5.000e+04          1
+2019-01-22 10:04:46)          4     WAITING 4.999e+04          1
+2019-01-22 10:04:46)          5     WAITING 5.001e+04          1
+2019-01-22 10:04:46)          6     WAITING 5.000e+04          1
+2019-01-22 10:04:46)          7     WAITING 5.000e+04          1
+2019-01-22 10:04:46)          8     WAITING 5.000e+04          1
+2019-01-22 10:04:46)          9     WAITING 4.999e+04          1
+2019-01-22 10:04:46)         10     RUNNING 0.000e+00          0
+2019-01-22 10:04:46)         11 NOT_STARTED 0.000e+00          0
+2019-01-22 10:04:46)         12 NOT_STARTED 0.000e+00          0
+2019-01-22 10:04:46)         13 NOT_STARTED 0.000e+00          0
+2019-01-22 10:04:46)         14 NOT_STARTED 0.000e+00          0
+2019-01-22 10:04:46)         15 NOT_STARTED 0.000e+00          0
+2019-01-22 10:04:46) Slot status
+2019-01-22 10:04:46)  Slot                                Resources Address  ME_Work_Units           Steps      Time Steps/Sec PDE_Work_Units           Steps      Time Steps/Sec
+2019-01-22 10:04:46) ------------------------------------------------------------------------------------------------------------------------------------------------------------
+2019-01-22 10:04:46)     0                        barkeri.local:c=1      @5              9       900000000 5.767e+01 1.561e+07              0               0 0.000e+00       nan
+2019-01-22 10:04:46) OutputWriter wrote 9 messages (954 bytes) in the last 59.5 seconds (0.000007 seconds writing). 0 messages (0 bytes) queued.
+2019-01-22 10:05:46) ========================================================================================================================
+2019-01-22 10:05:46) Performance statistics.
+2019-01-22 10:05:46) Supervisor @6 finished 9 work units (ids in range 10 to 18) with 9 parts in the last interval. 900000000 steps in 5.659e+01 seconds (1.590e+07 steps/second).
+2019-01-22 10:05:46) Replicate status: 0 aborted, 0 finished, 1 running, 14 waiting
+2019-01-22 10:05:46)         Id       State      Time Work_Units
+2019-01-22 10:05:46) -------------------------------------------
+2019-01-22 10:05:46)          1     WAITING 9.998e+04          2
+2019-01-22 10:05:46)          2     WAITING 4.999e+04          1
+2019-01-22 10:05:46)          3     WAITING 5.000e+04          1
+2019-01-22 10:05:46)          4     RUNNING 4.999e+04          1
+2019-01-22 10:05:46)          5     WAITING 5.001e+04          1
+2019-01-22 10:05:46)          6     WAITING 5.000e+04          1
+2019-01-22 10:05:46)          7     WAITING 5.000e+04          1
+2019-01-22 10:05:46)          8     WAITING 5.000e+04          1
+2019-01-22 10:05:46)          9     WAITING 1.000e+05          2
+2019-01-22 10:05:46)         10     WAITING 9.998e+04          2
+2019-01-22 10:05:46)         11     WAITING 5.000e+04          1
+2019-01-22 10:05:46)         12     WAITING 5.001e+04          1
+2019-01-22 10:05:46)         13     WAITING 5.000e+04          1
+2019-01-22 10:05:46)         14     WAITING 5.000e+04          1
+2019-01-22 10:05:46)         15     WAITING 5.001e+04          1
+2019-01-22 10:05:46) Slot status
+2019-01-22 10:05:46)  Slot                                Resources Address  ME_Work_Units           Steps      Time Steps/Sec PDE_Work_Units           Steps      Time Steps/Sec
+2019-01-22 10:05:46) ------------------------------------------------------------------------------------------------------------------------------------------------------------
+2019-01-22 10:05:46)     0                        barkeri.local:c=1      @5             18      1800000000 1.143e+02 1.575e+07              0               0 0.000e+00       nan
+2019-01-22 10:05:46) OutputWriter wrote 9 messages (969 bytes) in the last 60.0 seconds (0.000007 seconds writing). 0 messages (0 bytes) queued.
+2019-01-22 10:06:20) Replicate 11 completed with 1.00e+05 of simulation time using 2 work units.
+2019-01-22 10:06:33) Replicate 6 completed with 1.00e+05 of simulation time using 2 work units.
+2019-01-22 10:06:40) Replicate 14 completed with 1.00e+05 of simulation time using 2 work units.
+2019-01-22 10:06:46) ========================================================================================================================
+2019-01-22 10:06:46) Performance statistics.
+2019-01-22 10:06:46) Supervisor @6 finished 9 work units (ids in range 19 to 27) with 9 parts in the last interval. 899952697 steps in 5.960e+01 seconds (1.510e+07 steps/second).
+2019-01-22 10:06:46) Replicate status: 0 aborted, 3 finished, 1 running, 11 waiting
+2019-01-22 10:06:46)         Id       State      Time Work_Units
+2019-01-22 10:06:46) -------------------------------------------
+2019-01-22 10:06:46)          1     WAITING 9.998e+04          2
+2019-01-22 10:06:46)          2     WAITING 9.997e+04          2
+2019-01-22 10:06:46)          3     WAITING 1.000e+05          2
+2019-01-22 10:06:46)          4     WAITING 9.998e+04          2
+2019-01-22 10:06:46)          5     WAITING 5.001e+04          1
+2019-01-22 10:06:46)          6    FINISHED 1.000e+05          2
+2019-01-22 10:06:46)          7     WAITING 9.999e+04          2
+2019-01-22 10:06:46)          8     WAITING 1.000e+05          2
+2019-01-22 10:06:46)          9     WAITING 1.000e+05          2
+2019-01-22 10:06:46)         10     WAITING 9.998e+04          2
+2019-01-22 10:06:46)         11    FINISHED 1.000e+05          2
+2019-01-22 10:06:46)         12     WAITING 5.001e+04          1
+2019-01-22 10:06:46)         13     WAITING 9.999e+04          2
+2019-01-22 10:06:46)         14    FINISHED 1.000e+05          2
+2019-01-22 10:06:46)         15     RUNNING 5.001e+04          1
+2019-01-22 10:06:46) Slot status
+2019-01-22 10:06:46)  Slot                                Resources Address  ME_Work_Units           Steps      Time Steps/Sec PDE_Work_Units           Steps      Time Steps/Sec
+2019-01-22 10:06:46) ------------------------------------------------------------------------------------------------------------------------------------------------------------
+2019-01-22 10:06:46)     0                        barkeri.local:c=1      @5             27      2699952697 1.739e+02 1.553e+07              0               0 0.000e+00       nan
+2019-01-22 10:06:46) OutputWriter wrote 9 messages (972 bytes) in the last 60.0 seconds (0.000006 seconds writing). 0 messages (0 bytes) queued.
+2019-01-22 10:06:47) Replicate 15 completed with 1.00e+05 of simulation time using 2 work units.
+2019-01-22 10:06:53) Replicate 5 completed with 1.00e+05 of simulation time using 2 work units.
+2019-01-22 10:07:00) Replicate 12 completed with 1.00e+05 of simulation time using 2 work units.
+2019-01-22 10:07:00) Replicate 2 completed with 1.00e+05 of simulation time using 3 work units.
+2019-01-22 10:07:00) Replicate 1 completed with 1.00e+05 of simulation time using 3 work units.
+2019-01-22 10:07:00) Replicate 4 completed with 1.00e+05 of simulation time using 3 work units.
+2019-01-22 10:07:00) Replicate 10 completed with 1.00e+05 of simulation time using 3 work units.
+2019-01-22 10:07:00) Replicate 7 completed with 1.00e+05 of simulation time using 3 work units.
+2019-01-22 10:07:00) Replicate 13 completed with 1.00e+05 of simulation time using 3 work units.
+2019-01-22 10:07:00) Replicate 9 completed with 1.00e+05 of simulation time using 3 work units.
+2019-01-22 10:07:00) Replicate 3 completed with 1.00e+05 of simulation time using 3 work units.
+2019-01-22 10:07:00) Replicate 8 completed with 1.00e+05 of simulation time using 3 work units.
+2019-01-22 10:07:00) Replicate supervisor finished 15 replicates in 1.939e+02 seconds.
+2019-01-22 10:07:00) Supervisor @6 finished.
+2019-01-22 10:07:00) Job finished.
+2019-01-22 10:07:00) Hypervisor @0 finished.
+2019-01-22 10:07:00) Work unit runner @5 finished.
+2019-01-22 10:07:00) OutputPerformanceSignaler @4 finished.
+2019-01-22 10:07:00) OutputWriter wrote 39 messages and 3831 bytes total.
+2019-01-22 10:07:00) OutputWriter::HelperThread @3 finished.
+2019-01-22 10:07:00) OutputWriter @3 flushing and closing.
+2019-01-22 10:07:00) OutputWriter @3 finished.
+2019-01-22 10:07:00) Resource controller @1 finished.
+2019-01-22 10:07:00) Finalizing communications library.
+2019-01-22 10:07:00) Program execution finished.

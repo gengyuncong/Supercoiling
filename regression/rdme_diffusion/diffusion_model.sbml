@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sbml xmlns="http://www.sbml.org/sbml/level3/version1/core" level="3" version="1">
+    <model id="first_order_decay" substanceUnits="item" timeUnits="second" volumeUnits="litre" extentUnits="item">
+        <listOfUnitDefinitions>
+            <unitDefinition id="per_second">
+                <listOfUnits>
+                    <unit kind="second" exponent="-1" scale="0" multiplier="1"/>
+                </listOfUnits>
+            </unitDefinition>
+        </listOfUnitDefinitions>
+        <listOfCompartments>
+            <compartment id="V" size="1" spatialDimensions="3" constant="true"/>
+        </listOfCompartments>
+        <listOfSpecies>
+            <species id="n0"  compartment="V" initialAmount="1" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false"/>
+            <species id="n1"  compartment="V" initialAmount="1" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false"/>
+            <species id="n2"  compartment="V" initialAmount="1" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false"/>
+            <species id="n3"  compartment="V" initialAmount="1" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false"/>
+            <species id="n4"  compartment="V" initialAmount="1" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false"/>
+            <species id="n5"  compartment="V" initialAmount="1" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false"/>
+            <species id="n6"  compartment="V" initialAmount="1" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false"/>
+            <species id="n7"  compartment="V" initialAmount="1" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false"/>
+            <species id="n8"  compartment="V" initialAmount="1" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false"/>
+            <species id="n9"  compartment="V" initialAmount="1" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false"/>
+            <species id="n10"  compartment="V" initialAmount="1" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false"/>
+            <species id="n11"  compartment="V" initialAmount="1" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false"/>
+            <species id="n12"  compartment="V" initialAmount="1" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false"/>
+            <species id="n13"  compartment="V" initialAmount="1" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false"/>
+            <species id="n14"  compartment="V" initialAmount="1" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false"/>
+            <species id="n15"  compartment="V" initialAmount="1" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false"/>
+        </listOfSpecies>
+    </model>
+</sbml>

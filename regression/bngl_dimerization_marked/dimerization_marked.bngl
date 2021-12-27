@@ -1,0 +1,25 @@
+begin model
+
+begin parameters
+	A0_Y	0
+	A0_N	0
+	k1		0.0
+	k2 		0.0
+end parameters
+
+begin molecule types
+  A(dimer,M~Y~N)
+end molecule types
+
+begin species
+  A(dimer,M~Y)    A0_Y
+  A(dimer,M~N)    A0_N
+end species
+
+begin reaction rules
+
+  A(dimer) + A(dimer) <-> A(dimer!1).A(dimer!1)        k1,k2
+
+end reaction rules
+
+end model

@@ -1,0 +1,209 @@
+Lattice Microbe ES v2019.01 Release build 2019-01-21-17-02-48 in 64-bit mode with options AVX CPP11 FMA SBML SNAPPY.
+Copyright (C) 2012-2019 Roberts Group, Johns Hopkins University.
+Copyright (C) 2008-2012 Luthey-Schulten Group, University of Illinois at Urbana-Champaign.
+
+2019-01-22 08:52:25) Saving simulation output to  using lm::io::NullOutputWriter.
+2019-01-22 08:52:25) Initializing communications library.
+2019-01-22 08:52:25) Using local communicator on host BPH-ER-Spectre1.
+2019-01-22 08:52:25) Created a resource map using localhost BPH-ER-Spectre1: 1 hosts allocated, 0 hosts registered
+2019-01-22 08:52:25) Resource controller @1 started.
+2019-01-22 08:52:25) Loading simulation input from perf/perf.99.latest/first_order_birth_death.lm using lm::io::hdf5::Hdf5InputReader.
+simulation_options {
+  time_limit: 100000
+}
+output_options {
+  species_write_interval: 10000
+  concentrations_write_interval: 10000
+}
+reaction_model {
+  number_species: 1
+  number_reactions: 2
+  initial_species_count: 2000
+  reaction {
+    type: 0
+    rate_constant: 1000
+  }
+  reaction {
+    type: 1
+    rate_constant: 1
+  }
+  stoichiometric_matrix: 1
+  stoichiometric_matrix: -1
+  dependency_matrix: 0
+  dependency_matrix: 1
+}
+2019-01-22 08:52:25) Hypervisor @0 of type lm::simulation::SimpleHypervisor started.
+2019-01-22 08:52:25) Resource controller @1 on BPH-ER-Spectre1 reported 8 cpu core(s) and 0 gpu device(s). 0 hosts registered, 1 hosts remaining.
+2019-01-22 08:52:25) Registered resources for host BPH-ER-Spectre1 (defaults=1): 2 cpu cores, 0 gpu devices
+2019-01-22 08:52:25) All resources registered with hypervisor, starting workers.
+2019-01-22 08:52:25) Reserved core 0 on @1 for the output writer.
+2019-01-22 08:52:25) OutputWriter @3 started.
+2019-01-22 08:52:25) Creating slot 0 on @1 using resources: BPH-ER-Spectre1:c=1.
+2019-01-22 08:52:25) 2019-01-22 08:52:25) Output writer started: @3.
+OutputPerformanceSignaler @4 started, writing performance statistics every 60 seconds.
+2019-01-22 08:52:25) Output performance signaller started: @4.
+2019-01-22 08:52:25) Work Unit runner @5 started with 1 cpu cores (affinity=0) and 0 gpus.
+2019-01-22 08:52:25) Work unit runner started: @5.
+2019-01-22 08:52:25) All hypervisor workers have started, beginning job.
+2019-01-22 08:52:25) Job started.
+2019-01-22 08:52:25) Supervisor @6 of type lm::replicates::ReplicateSupervisor started.
+2019-01-22 08:52:25) Replicate supervisor started.
+2019-01-22 08:52:25) OutputWriter::HelperThread @3 started.
+2019-01-22 08:53:24) ========================================================================================================================
+2019-01-22 08:53:24) Performance statistics.
+2019-01-22 08:53:24) Supervisor @6 finished 7 work units (ids in range 0 to 7) with 7 parts in the last interval. 700000000 steps in 4.809e+01 seconds (1.456e+07 steps/second).
+2019-01-22 08:53:24) Replicate status: 0 aborted, 0 finished, 1 running, 14 waiting
+2019-01-22 08:53:24)         Id       State      Time Work_Units
+2019-01-22 08:53:24) -------------------------------------------
+2019-01-22 08:53:24)          1     WAITING 4.999e+04          1
+2019-01-22 08:53:24)          2     WAITING 5.000e+04          1
+2019-01-22 08:53:24)          3     WAITING 5.000e+04          1
+2019-01-22 08:53:24)          4     WAITING 5.000e+04          1
+2019-01-22 08:53:24)          5     WAITING 4.999e+04          1
+2019-01-22 08:53:24)          6     WAITING 4.999e+04          1
+2019-01-22 08:53:24)          7     WAITING 5.000e+04          1
+2019-01-22 08:53:24)          8     RUNNING 0.000e+00          0
+2019-01-22 08:53:24)          9 NOT_STARTED 0.000e+00          0
+2019-01-22 08:53:25)         10 NOT_STARTED 0.000e+00          0
+2019-01-22 08:53:25)         11 NOT_STARTED 0.000e+00          0
+2019-01-22 08:53:25)         12 NOT_STARTED 0.000e+00          0
+2019-01-22 08:53:25)         13 NOT_STARTED 0.000e+00          0
+2019-01-22 08:53:25)         14 NOT_STARTED 0.000e+00          0
+2019-01-22 08:53:25)         15 NOT_STARTED 0.000e+00          0
+2019-01-22 08:53:25) Slot status
+2019-01-22 08:53:25)  Slot                                Resources Address  ME_Work_Units           Steps      Time Steps/Sec PDE_Work_Units           Steps      Time Steps/Sec
+2019-01-22 08:53:25) ------------------------------------------------------------------------------------------------------------------------------------------------------------
+2019-01-22 08:53:25)     0                      BPH-ER-Spectre1:c=1      @5              7       700000000 4.809e+01 1.456e+07              0               0 0.000e+00      -nan
+2019-01-22 08:53:25) OutputWriter wrote 7 messages (730 bytes) in the last 59.9 seconds (0.000003 seconds writing). 0 messages (0 bytes) queued.
+2019-01-22 08:54:24) ========================================================================================================================
+2019-01-22 08:54:24) Performance statistics.
+2019-01-22 08:54:24) Supervisor @6 finished 1 work units (ids in range 8 to 8) with 1 parts in the last interval. 100000000 steps in 2.887e+01 seconds (3.463e+06 steps/second).
+2019-01-22 08:54:24) Replicate status: 0 aborted, 0 finished, 1 running, 14 waiting
+2019-01-22 08:54:24)         Id       State      Time Work_Units
+2019-01-22 08:54:24) -------------------------------------------
+2019-01-22 08:54:24)          1     WAITING 4.999e+04          1
+2019-01-22 08:54:24)          2     WAITING 5.000e+04          1
+2019-01-22 08:54:24)          3     WAITING 5.000e+04          1
+2019-01-22 08:54:24)          4     WAITING 5.000e+04          1
+2019-01-22 08:54:24)          5     WAITING 4.999e+04          1
+2019-01-22 08:54:24)          6     WAITING 4.999e+04          1
+2019-01-22 08:54:24)          7     WAITING 5.000e+04          1
+2019-01-22 08:54:24)          8     WAITING 4.999e+04          1
+2019-01-22 08:54:24)          9     RUNNING 0.000e+00          0
+2019-01-22 08:54:24)         10 NOT_STARTED 0.000e+00          0
+2019-01-22 08:54:24)         11 NOT_STARTED 0.000e+00          0
+2019-01-22 08:54:24)         12 NOT_STARTED 0.000e+00          0
+2019-01-22 08:54:24)         13 NOT_STARTED 0.000e+00          0
+2019-01-22 08:54:24)         14 NOT_STARTED 0.000e+00          0
+2019-01-22 08:54:24)         15 NOT_STARTED 0.000e+00          0
+2019-01-22 08:54:24) Slot status
+2019-01-22 08:54:24)  Slot                                Resources Address  ME_Work_Units           Steps      Time Steps/Sec PDE_Work_Units           Steps      Time Steps/Sec
+2019-01-22 08:54:24) ------------------------------------------------------------------------------------------------------------------------------------------------------------
+2019-01-22 08:54:24)     0                      BPH-ER-Spectre1:c=1      @5              8       800000000 7.696e+01 1.039e+07              0               0 0.000e+00      -nan
+2019-01-22 08:54:24) OutputWriter wrote 1 messages (103 bytes) in the last 60.0 seconds (0.000002 seconds writing). 0 messages (0 bytes) queued.
+2019-01-22 08:55:24) ========================================================================================================================
+2019-01-22 08:55:24) Performance statistics.
+2019-01-22 08:55:24) Supervisor @6 finished 3 work units (ids in range 9 to 11) with 3 parts in the last interval. 300000000 steps in 1.018e+02 seconds (2.947e+06 steps/second).
+2019-01-22 08:55:24) Replicate status: 0 aborted, 0 finished, 1 running, 14 waiting
+2019-01-22 08:55:24)         Id       State      Time Work_Units
+2019-01-22 08:55:24) -------------------------------------------
+2019-01-22 08:55:24)          1     WAITING 4.999e+04          1
+2019-01-22 08:55:24)          2     WAITING 5.000e+04          1
+2019-01-22 08:55:24)          3     WAITING 5.000e+04          1
+2019-01-22 08:55:24)          4     WAITING 5.000e+04          1
+2019-01-22 08:55:24)          5     WAITING 4.999e+04          1
+2019-01-22 08:55:24)          6     WAITING 4.999e+04          1
+2019-01-22 08:55:24)          7     WAITING 5.000e+04          1
+2019-01-22 08:55:24)          8     WAITING 4.999e+04          1
+2019-01-22 08:55:24)          9     WAITING 4.999e+04          1
+2019-01-22 08:55:24)         10     WAITING 5.000e+04          1
+2019-01-22 08:55:24)         11     WAITING 5.001e+04          1
+2019-01-22 08:55:24)         12     RUNNING 0.000e+00          0
+2019-01-22 08:55:24)         13 NOT_STARTED 0.000e+00          0
+2019-01-22 08:55:24)         14 NOT_STARTED 0.000e+00          0
+2019-01-22 08:55:24)         15 NOT_STARTED 0.000e+00          0
+2019-01-22 08:55:24) Slot status
+2019-01-22 08:55:24)  Slot                                Resources Address  ME_Work_Units           Steps      Time Steps/Sec PDE_Work_Units           Steps      Time Steps/Sec
+2019-01-22 08:55:24) ------------------------------------------------------------------------------------------------------------------------------------------------------------
+2019-01-22 08:55:24)     0                      BPH-ER-Spectre1:c=1      @5             11      1100000000 1.787e+02 6.154e+06              0               0 0.000e+00      -nan
+2019-01-22 08:55:24) OutputWriter wrote 3 messages (318 bytes) in the last 60.0 seconds (0.000003 seconds writing). 0 messages (0 bytes) queued.
+2019-01-22 08:56:20) Replicate 1 completed with 1.00e+05 of simulation time using 2 work units.
+2019-01-22 08:56:24) ========================================================================================================================
+2019-01-22 08:56:24) Performance statistics.
+2019-01-22 08:56:24) Supervisor @6 finished 8 work units (ids in range 12 to 19) with 8 parts in the last interval. 799994933 steps in 5.667e+01 seconds (1.412e+07 steps/second).
+2019-01-22 08:56:24) Replicate status: 0 aborted, 1 finished, 1 running, 13 waiting
+2019-01-22 08:56:24)         Id       State      Time Work_Units
+2019-01-22 08:56:24) -------------------------------------------
+2019-01-22 08:56:24)          1    FINISHED 1.000e+05          2
+2019-01-22 08:56:24)          2     WAITING 5.000e+04          1
+2019-01-22 08:56:24)          3     WAITING 5.000e+04          1
+2019-01-22 08:56:24)          4     WAITING 5.000e+04          1
+2019-01-22 08:56:24)          5     WAITING 9.998e+04          2
+2019-01-22 08:56:24)          6     WAITING 4.999e+04          1
+2019-01-22 08:56:24)          7     WAITING 5.000e+04          1
+2019-01-22 08:56:24)          8     RUNNING 4.999e+04          1
+2019-01-22 08:56:24)          9     WAITING 9.998e+04          2
+2019-01-22 08:56:24)         10     WAITING 5.000e+04          1
+2019-01-22 08:56:24)         11     WAITING 5.001e+04          1
+2019-01-22 08:56:24)         12     WAITING 4.999e+04          1
+2019-01-22 08:56:24)         13     WAITING 5.000e+04          1
+2019-01-22 08:56:24)         14     WAITING 9.998e+04          2
+2019-01-22 08:56:24)         15     WAITING 5.000e+04          1
+2019-01-22 08:56:24) Slot status
+2019-01-22 08:56:24)  Slot                                Resources Address  ME_Work_Units           Steps      Time Steps/Sec PDE_Work_Units           Steps      Time Steps/Sec
+2019-01-22 08:56:24) ------------------------------------------------------------------------------------------------------------------------------------------------------------
+2019-01-22 08:56:24)     0                      BPH-ER-Spectre1:c=1      @5             19      1899994933 2.354e+02 8.071e+06              0               0 0.000e+00      -nan
+2019-01-22 08:56:24) OutputWriter wrote 8 messages (853 bytes) in the last 60.0 seconds (0.000004 seconds writing). 0 messages (0 bytes) queued.
+2019-01-22 08:56:33) Replicate 12 completed with 1.00e+05 of simulation time using 2 work units.
+2019-01-22 08:56:39) Replicate 6 completed with 1.00e+05 of simulation time using 2 work units.
+2019-01-22 08:57:06) Replicate 2 completed with 1.00e+05 of simulation time using 2 work units.
+2019-01-22 08:57:24) ========================================================================================================================
+2019-01-22 08:57:24) Performance statistics.
+2019-01-22 08:57:24) Supervisor @6 finished 5 work units (ids in range 20 to 24) with 5 parts in the last interval. 499978266 steps in 4.595e+01 seconds (1.088e+07 steps/second).
+2019-01-22 08:57:24) Replicate status: 0 aborted, 4 finished, 1 running, 10 waiting
+2019-01-22 08:57:24)         Id       State      Time Work_Units
+2019-01-22 08:57:24) -------------------------------------------
+2019-01-22 08:57:24)          1    FINISHED 1.000e+05          2
+2019-01-22 08:57:24)          2    FINISHED 1.000e+05          2
+2019-01-22 08:57:24)          3     WAITING 5.000e+04          1
+2019-01-22 08:57:24)          4     WAITING 5.000e+04          1
+2019-01-22 08:57:24)          5     WAITING 9.998e+04          2
+2019-01-22 08:57:24)          6    FINISHED 1.000e+05          2
+2019-01-22 08:57:24)          7     RUNNING 5.000e+04          1
+2019-01-22 08:57:24)          8     WAITING 9.999e+04          2
+2019-01-22 08:57:24)          9     WAITING 9.998e+04          2
+2019-01-22 08:57:24)         10     WAITING 9.998e+04          2
+2019-01-22 08:57:24)         11     WAITING 5.001e+04          1
+2019-01-22 08:57:24)         12    FINISHED 1.000e+05          2
+2019-01-22 08:57:24)         13     WAITING 5.000e+04          1
+2019-01-22 08:57:24)         14     WAITING 9.998e+04          2
+2019-01-22 08:57:24)         15     WAITING 5.000e+04          1
+2019-01-22 08:57:24) Slot status
+2019-01-22 08:57:24)  Slot                                Resources Address  ME_Work_Units           Steps      Time Steps/Sec PDE_Work_Units           Steps      Time Steps/Sec
+2019-01-22 08:57:24) ------------------------------------------------------------------------------------------------------------------------------------------------------------
+2019-01-22 08:57:24)     0                      BPH-ER-Spectre1:c=1      @5             24      2399973199 2.814e+02 8.530e+06              0               0 0.000e+00      -nan
+2019-01-22 08:57:24) OutputWriter wrote 5 messages (567 bytes) in the last 60.0 seconds (0.000009 seconds writing). 0 messages (0 bytes) queued.
+2019-01-22 08:57:57) Replicate 15 completed with 1.00e+05 of simulation time using 2 work units.
+2019-01-22 08:58:09) Replicate 4 completed with 1.00e+05 of simulation time using 2 work units.
+2019-01-22 08:58:16) Replicate 11 completed with 1.00e+05 of simulation time using 2 work units.
+2019-01-22 08:58:16) Replicate 5 completed with 1.00e+05 of simulation time using 3 work units.
+2019-01-22 08:58:16) Replicate 10 completed with 1.00e+05 of simulation time using 3 work units.
+2019-01-22 08:58:16) Replicate 9 completed with 1.00e+05 of simulation time using 3 work units.
+2019-01-22 08:58:16) Replicate 14 completed with 1.00e+05 of simulation time using 3 work units.
+2019-01-22 08:58:16) Replicate 3 completed with 1.00e+05 of simulation time using 3 work units.
+2019-01-22 08:58:16) Replicate 7 completed with 1.00e+05 of simulation time using 3 work units.
+2019-01-22 08:58:16) Replicate 8 completed with 1.00e+05 of simulation time using 3 work units.
+2019-01-22 08:58:16) Replicate 13 completed with 1.00e+05 of simulation time using 3 work units.
+2019-01-22 08:58:16) Replicate supervisor finished 15 replicates in 3.512e+02 seconds.
+2019-01-22 08:58:16) Supervisor @6 finished.
+2019-01-22 08:58:16) Job finished.
+2019-01-22 08:58:16) Hypervisor @0 finished.
+2019-01-22 08:58:16) Work unit runner @5 finished.
+2019-01-22 08:58:16) OutputPerformanceSignaler @4 finished.
+2019-01-22 08:58:16) OutputWriter wrote 38 messages and 3772 bytes total.
+2019-01-22 08:58:16) OutputWriter::HelperThread @3 finished.
+2019-01-22 08:58:16) OutputWriter @3 flushing and closing.
+2019-01-22 08:58:16) OutputWriter @3 finished.
+2019-01-22 08:58:16) Resource controller @1 finished.
+2019-01-22 08:58:16) Finalizing communications library.
+2019-01-22 08:58:16) Program execution finished.

@@ -1,0 +1,43 @@
+begin model
+
+begin parameters
+ k1 1
+ k2 2
+ k3 3
+ k4 4
+ k5 5
+ k6 6
+ k7 7
+ k8 8
+end parameters
+
+begin molecule types
+  A()
+  B()
+  A3()
+  A2B1()
+  A1B2()
+  B3()
+end molecule types
+
+begin species
+  A()     100
+  B()     200
+  A3()    0
+  A2B1()  0
+  A1B2()  0
+  B3()    0
+end species
+
+begin reaction rules
+  A() + A() + A() <-> A3()   k1, k2
+	A() + A() + B() <-> A2B1() k3, k4
+  A() + B() + A() <-> A2B1() k3, k4
+  B() + A() + A() <-> A2B1() k3, k4
+  B() + B() + A() <-> A1B2() k5, k6
+  B() + A() + B() <-> A1B2() k5, k6
+  A() + B() + B() <-> A1B2() k5, k6
+  B() + B() + B() <-> B3()   k7, k8
+end reaction rules
+
+end model

@@ -1,0 +1,56 @@
+/*
+ * Copyright 2012-2019 Johns Hopkins University
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * Developed by: Roberts Group
+ *               Johns Hopkins University
+ *               http://biophysics.jhu.edu/roberts/
+ *
+ * Author(s): Elijah Roberts, Max Klein
+ */
+
+syntax = "proto2";
+package lm.message;
+
+import "lm/input/DiffusionModel.proto";
+import "lm/input/MicroenvironmentModel.proto";
+import "lm/input/OutputOptions.proto";
+import "lm/input/ReactionModel.proto";
+import "lm/message/Endpoint.proto";
+import "lm/message/WorkUnit.proto";
+import "lm/types/OrderParameters.proto";
+import "lm/types/SolverType.proto";
+import "lm/types/TrajectoryBarrier.proto";
+import "lm/types/TrajectoryLimits.proto";
+
+message RunWorkUnit {
+    required uint64 work_unit_id                                    = 1;
+    required lm.types.SolverType solver_type                        = 2;
+    required Endpoint output_address                                = 3;
+    required Endpoint supervisor_address                            = 4;
+
+    required uint64 max_steps                                       = 30;
+    optional lm.types.TrajectoryLimits trajectory_limits            = 31;
+    optional lm.types.TrajectoryBarriers trajectory_barriers        = 32;
+
+    optional lm.input.ReactionModel reaction_model                  = 40;
+    optional lm.input.DiffusionModel diffusion_model                = 41;
+    optional lm.input.MicroenvironmentModel microenv_model          = 42;
+
+    optional lm.types.OrderParameters order_parameters              = 50;
+
+    optional lm.input.OutputOptions output_options                  = 91;
+
+    repeated lm.message.WorkUnit part                               = 101;
+}

@@ -1,0 +1,61 @@
+2017.03.13
+
+    General
+    * Many improvements to the parsing of SBML documents to support exports from COPASI.
+    * Added support for import of BNGL documents.
+    * Added a new microenvironment simulation type for running simulations of many cells interacting throught diffusion.
+    * Added support for Snappy compression of arrays during message passing and during SFile writing.
+    * Added support for execution on a single node using shared memory instead of MPI.
+    * Added many regression tests to ensure the code executes correctly.
+    * Many other performance enhancements and bugfixes.
+
+2016.02.12
+
+    General
+    * Implemented generic framework for defining propensity functions.
+    * Implemented the ability to load classes at run time from a shared library, including propensity functions.
+    * Added the ability for a work unit runner to be given a list of work units parts to run before asking for more
+      work.
+    * Reorganized the supervisor/trajectory list framework in preparation for release of enhanced sampling code.
+    
+    CME
+    * Added an AVX optimized version of the Gillespie direct solver with ~1.8X performance increase. Compile with the
+      OPT_AVX option defined to enable.
+    * Added support for FMA instructions when compiling with AVX instructions enabled. Compile with the
+      OPT_FMA option defined to enable.
+    * Added support for Intel's SVML library when compiling with icc and with AVX instructions enabled. Compile with the
+      OPT_SVML option defined to enable.
+
+2016.01.20
+
+    General
+    * First LMES public release, branched from UIUC branch on 2012-09-03.
+    * Changed to CMake for building.
+    * Significant rewrite of the core program logic to support enhanced sampling of master equations.
+        - Moved to a supervisor/worker framework where the supervisor directs workers to execute many small work units.
+        - Replicate supervisor runs small chunks of each trajectory rather than one complete trajectory at at time,
+          which can make better use of resources.
+    * Added a generic framework for registering new implementations of solvers, writers, supervisors, etc.
+    * Removed support for standalone version, only the MPI build is now supported.
+    * Added an SFile output writer for efficient writing of output for use with Hadoop/Spark clusters.
+    
+    MPI
+    * Require the MPI library support the MPI_THREAD_MULTIPLE capability, which current is only supported by MPICH.
+        - A single MPI process is started per node, using multiple threads to perform the work.
+        - A resource controller runs in the MPI thread, which starts worker threads as needed. 
+    * Use protocol buffers for all network messages.
+    * Added support for using a different number of cores on each node.
+    * Added support for reading the list of assigned nodes from the PBS queue system using the PBS_NODEFILE environment
+      variable. In this case the -c flag is ignored.
+    
+    CME
+    * Added zlib compression of CME output to greatly reduce file sizes.
+    * Allow for the calculation of arbitrary order parameters during simulation execution.
+    
+    RDME
+    * Fixed a bug when using the CUDA MPDRDME solver in which the overflow list was not being used and particles were
+      being lost (Thanks to Jacob Halatek and Michael Hartmann for reporting).
+    * Significant performance improvements to the next subvolume solver by optimizing the reaction queue.
+    * Added optional zlib compression of lattices during serialization.
+    * Added several new boundary conditions, including gradient boundary conditions.
+      

@@ -1,0 +1,25 @@
+begin model
+
+begin parameters
+	A0_Y	0
+	A0_N	0
+	k1		0.0
+	k2 		0.0
+end parameters
+
+begin molecule types
+  A(b1,b2,M~Y~N)
+end molecule types
+
+begin species
+  A(b1,b2,M~Y)    A0_Y
+  A(b1,b2,M~N)    A0_N
+end species
+
+begin reaction rules
+
+  A(b1,b2) + A(b1,b2) + A(b1,b2) <-> A(b1!3,b2!1).A(b1!1,b2!2).A(b1!2,b2!3)		k1,k2
+
+end reaction rules
+
+end model

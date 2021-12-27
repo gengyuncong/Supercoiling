@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+# die on the first error
+set -e
+
+# path to the directory containing this script
+thisdir=$(dirname "$(stat -f "${BASH_SOURCE}")")
+
+# change to the dir with the setup.py file
+cd "${thisdir}/../../utils/python/protobuf/"
+
+# install for both py2 and py3, if their pips are in path
+for pipname in pip pip3; do
+    pippath=$(which $pipname)
+    if [ -x "$pippath" ] ; then
+        printf "Installing with ${pipname}\n\n"
+        $pipname install -Ue .
+        printf "\n"
+    fi
+done
+

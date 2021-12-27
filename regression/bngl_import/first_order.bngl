@@ -1,0 +1,38 @@
+begin model
+
+begin parameters
+ k1 1
+ k2 2
+ k3 3
+ k4 4
+ k5 5
+ k6 6
+ k7 7
+end parameters
+
+begin molecule types
+  A()
+  B()
+  E(S100~p~n,T200~p~n)
+end molecule types
+
+begin species
+  A() 100
+  B() 200
+  E(S100~n,T200~n) 300
+end species
+
+begin reaction rules
+	A() -> 0 k1
+	A() -> B() k2
+	A() -> B() + B() k3
+	A() -> A() + B() k4
+	A() -> A() + A() + B() k5
+  E(S100~n) <-> E(S100~p) 2.0, 3.0
+  E(T200~n) <-> E(T200~p) 4.0, 5.0
+	E(S100~p) -> 0 k6
+	E(T200~p) -> 0 k7
+
+end reaction rules
+
+end model

@@ -1,0 +1,21 @@
+begin model
+
+begin parameters
+ kb 10
+ kd 0.2
+end parameters
+
+begin molecule types
+  A()
+end molecule types
+
+begin species
+  A() 0
+end species
+
+begin reaction rules
+  birth: 0 -> A() kb
+  death: A() -> 0 kd
+end reaction rules
+
+end model

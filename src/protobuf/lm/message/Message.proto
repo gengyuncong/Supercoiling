@@ -1,0 +1,91 @@
+/*
+ * Copyright 2012-2019 Johns Hopkins University
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * Developed by: Roberts Group
+ *               Johns Hopkins University
+ *               http://biophysics.jhu.edu/roberts/
+ *
+ * Author(s): Elijah Roberts, Max Klein
+ */
+
+syntax = "proto2";
+package lm.message;
+
+import "lm/message/Endpoint.proto";
+import "lm/message/ResourcesAvailable.proto";
+import "lm/message/StartWorkUnitRunner.proto";
+import "lm/message/StartedWorkUnitRunner.proto";
+import "lm/message/StopWorkUnitRunner.proto";
+import "lm/message/StoppedWorkUnitRunner.proto";
+import "lm/message/RunWorkUnit.proto";
+import "lm/message/StartedWorkUnit.proto";
+import "lm/message/FinishedWorkUnit.proto";
+import "lm/message/StartOutputWriter.proto";
+import "lm/message/StartedOutputWriter.proto";
+import "lm/message/StopResourceController.proto";
+import "lm/message/ProcessAggregatedOutput.proto";
+import "lm/message/ProcessWorkUnitOutput.proto";
+import "lm/message/PingTarget.proto";
+
+import "lm/message/StartCheckpointSignaler.proto";
+import "lm/message/StartedCheckpointSignaler.proto";
+import "lm/message/PerformCheckpointing.proto";
+import "lm/message/FinishedCheckpointing.proto";
+
+import "lm/message/StartOutputPerformanceSignaler.proto";
+import "lm/message/StartedOutputPerformanceSignaler.proto";
+import "lm/message/PerformOutputPerformance.proto";
+
+import "lm/message/SupervisorStarted.proto";
+import "lm/message/SupervisorFinished.proto";
+
+message Message {
+    required Endpoint source_address                                            = 1;
+    required Endpoint destination_address                                       = 2;
+
+    optional lm.message.ResourcesAvailable resources_available                  = 10;
+
+    repeated lm.message.StartWorkUnitRunner start_work_unit_runner              = 11;
+    optional lm.message.StartedWorkUnitRunner started_work_unit_runner          = 12;
+
+    repeated lm.message.StopWorkUnitRunner stop_work_unit_runner                = 13;
+    optional lm.message.StoppedWorkUnitRunner stopped_work_unit_runner          = 14;
+
+    optional lm.message.RunWorkUnit run_work_unit                               = 15;
+    optional lm.message.StartedWorkUnit started_work_unit                       = 16;
+    optional lm.message.FinishedWorkUnit finished_work_unit                     = 17;
+    
+    optional lm.message.StartOutputWriter start_output_writer                   = 20;
+    optional lm.message.StartedOutputWriter started_output_writer               = 21;
+
+    optional lm.message.StartCheckpointSignaler start_checkpoint_signaler       = 30;
+    optional lm.message.StartedCheckpointSignaler started_checkpoint_signaler   = 31;
+    optional lm.message.PerformCheckpointing perform_checkpointing              = 32;
+    optional lm.message.FinishedCheckpointing finished_checkpointing            = 33;
+
+    optional lm.message.StartOutputPerformanceSignaler start_output_performance_signaler        = 40;
+    optional lm.message.StartedOutputPerformanceSignaler started_output_performance_signaler    = 41;
+    optional lm.message.PerformOutputPerformance perform_output_performance                     = 42;
+
+    optional lm.message.StopResourceController stop_resource_controller         = 50;
+    
+    optional lm.message.SupervisorStarted supervisor_started                    = 61;
+    optional lm.message.SupervisorFinished supervisor_finished                  = 62;
+
+    optional lm.message.ProcessWorkUnitOutput process_work_unit_output          = 100;
+    optional lm.message.ProcessAggregatedOutput process_aggregated_output       = 101;
+
+    optional lm.message.PingTarget ping_target                                  = 1000;
+}

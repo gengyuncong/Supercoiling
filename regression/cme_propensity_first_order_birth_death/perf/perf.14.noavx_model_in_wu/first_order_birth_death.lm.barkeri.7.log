@@ -1,0 +1,110 @@
+Lattice Microbe ES v2018.12 Release build 2019-01-03-16-49-44 in 64-bit mode with options AVX CPP11 SBML SNAPPY.
+Copyright (C) 2012-2018 Roberts Group, Johns Hopkins University.
+Copyright (C) 2008-2012 Luthey-Schulten Group, University of Illinois at Urbana-Champaign.
+
+2019-01-03 17:13:02) saving simulation output () to: 
+2019-01-03 17:13:02) Initializing communications library.
+2019-01-03 17:13:02) Using local communicator on host barkeri.bph.jhu.edu.
+2019-01-03 17:13:02) Resource controller @1 started.
+2019-01-03 17:13:02) Parsed the following user-defined simulation parameters:
+          KEY  VALUE
+      maxTime 100000
+writeInterval  10000
+
+2019-01-03 17:13:02) Hypervisor @0 of type lm::simulation::SimpleHypervisor started.
+2019-01-03 17:13:02) Resource controller @1 on barkeri.bph.jhu.edu registered with 8 cpu core(s) and 0 gpu device(s).
+2019-01-03 17:13:02) Registered resources for host barkeri.bph.jhu.edu (defaults=1): 2 cpu cores, 0 gpu devices
+2019-01-03 17:13:02) All resources registered with hypervisor, starting workers.
+2019-01-03 17:13:02) Reserved core 0 on @1 for the output writer.
+2019-01-03 17:13:02) OutputWriter @3 started.
+2019-01-03 17:13:02) Creating slot 0 on @1 using resources: barkeri.bph.jhu.edu:c=1.
+2019-01-03 17:13:02) OutputPerformanceSignaler @4 started, writing performance statistics every 60 seconds.
+2019-01-03 17:13:02) OutputWriter::HelperThread @3 started.
+2019-01-03 17:13:02) Output writer started: @3.
+2019-01-03 17:13:02) Work Unit runner @5 started with 1 cpu cores (affinity=0) and 0 gpus.
+2019-01-03 17:13:02) Output performance signaller started: @4.
+2019-01-03 17:13:02) Work unit runner started: @5.
+2019-01-03 17:13:02) All hypervisor workers have started, beginning job.
+2019-01-03 17:13:02) Job started.
+2019-01-03 17:13:02) Supervisor @6 of type lm::replicates::ReplicateSupervisor started.
+2019-01-03 17:13:02) Replicate supervisor started.
+2019-01-03 17:14:02) ========================================================================================================================
+2019-01-03 17:14:02) Performance statistics.
+2019-01-03 17:14:02) Supervisor @6 finished 12 work units (ids in range 0 to 12) with 12 parts in the last interval. 1200000000 steps in 5.773e+01 seconds (2.079e+07 steps/second).
+2019-01-03 17:14:02) Replicate status: 0 aborted, 0 finished, 1 running, 14 waiting
+2019-01-03 17:14:02)         Id       State      Time Work_Units
+2019-01-03 17:14:02) -------------------------------------------
+2019-01-03 17:14:02)          1 NOT_STARTED 0.000e+00          0
+2019-01-03 17:14:02)          2 NOT_STARTED 0.000e+00          0
+2019-01-03 17:14:02)          3     RUNNING 0.000e+00          0
+2019-01-03 17:14:02)          4     WAITING 5.001e+04          1
+2019-01-03 17:14:02)          5     WAITING 5.000e+04          1
+2019-01-03 17:14:02)          6     WAITING 4.998e+04          1
+2019-01-03 17:14:02)          7     WAITING 4.999e+04          1
+2019-01-03 17:14:02)          8     WAITING 5.002e+04          1
+2019-01-03 17:14:02)          9     WAITING 4.999e+04          1
+2019-01-03 17:14:02)         10     WAITING 4.999e+04          1
+2019-01-03 17:14:02)         11     WAITING 4.999e+04          1
+2019-01-03 17:14:02)         12     WAITING 5.000e+04          1
+2019-01-03 17:14:02)         13     WAITING 5.000e+04          1
+2019-01-03 17:14:02)         14     WAITING 5.001e+04          1
+2019-01-03 17:14:02)         15     WAITING 5.000e+04          1
+2019-01-03 17:14:02) Slot status
+2019-01-03 17:14:02)  Slot                                Resources Address  ME_Work_Units           Steps      Time Steps/Sec PDE_Work_Units           Steps      Time Steps/Sec
+2019-01-03 17:14:02) ------------------------------------------------------------------------------------------------------------------------------------------------------------
+2019-01-03 17:14:02)     0                  barkeri.bph.jhu.edu:c=1      @5             12      1200000000 5.773e+01 2.079e+07              0               0 0.000e+00       nan
+2019-01-03 17:14:02) OutputWriter wrote 12 messages (1278 bytes) in the last 59.0 seconds (0.000005 seconds writing). 0 messages (0 bytes) queued.
+2019-01-03 17:14:34) Replicate 10 completed with 1.00e+05 of simulation time using 2 work units.
+2019-01-03 17:14:58) Replicate 15 completed with 1.00e+05 of simulation time using 2 work units.
+2019-01-03 17:15:02) ========================================================================================================================
+2019-01-03 17:15:02) Performance statistics.
+2019-01-03 17:15:02) Supervisor @6 finished 12 work units (ids in range 13 to 24) with 12 parts in the last interval. 1199986260 steps in 5.808e+01 seconds (2.066e+07 steps/second).
+2019-01-03 17:15:02) Replicate status: 0 aborted, 2 finished, 1 running, 12 waiting
+2019-01-03 17:15:02)         Id       State      Time Work_Units
+2019-01-03 17:15:02) -------------------------------------------
+2019-01-03 17:15:02)          1     WAITING 9.997e+04          2
+2019-01-03 17:15:02)          2     WAITING 1.000e+05          2
+2019-01-03 17:15:02)          3     WAITING 5.001e+04          1
+2019-01-03 17:15:02)          4     WAITING 5.001e+04          1
+2019-01-03 17:15:02)          5     WAITING 5.000e+04          1
+2019-01-03 17:15:02)          6     WAITING 9.998e+04          2
+2019-01-03 17:15:02)          7     WAITING 9.999e+04          2
+2019-01-03 17:15:02)          8     WAITING 5.002e+04          1
+2019-01-03 17:15:02)          9     WAITING 1.000e+05          2
+2019-01-03 17:15:02)         10    FINISHED 1.000e+05          2
+2019-01-03 17:15:02)         11     WAITING 9.999e+04          2
+2019-01-03 17:15:02)         12     WAITING 9.999e+04          2
+2019-01-03 17:15:02)         13     RUNNING 5.000e+04          1
+2019-01-03 17:15:02)         14     WAITING 5.001e+04          1
+2019-01-03 17:15:02)         15    FINISHED 1.000e+05          2
+2019-01-03 17:15:02) Slot status
+2019-01-03 17:15:02)  Slot                                Resources Address  ME_Work_Units           Steps      Time Steps/Sec PDE_Work_Units           Steps      Time Steps/Sec
+2019-01-03 17:15:02) ------------------------------------------------------------------------------------------------------------------------------------------------------------
+2019-01-03 17:15:02)     0                  barkeri.bph.jhu.edu:c=1      @5             24      2399986260 1.158e+02 2.072e+07              0               0 0.000e+00       nan
+2019-01-03 17:15:02) OutputWriter wrote 12 messages (1308 bytes) in the last 60.0 seconds (0.000005 seconds writing). 0 messages (0 bytes) queued.
+2019-01-03 17:15:13) Replicate 4 completed with 1.00e+05 of simulation time using 2 work units.
+2019-01-03 17:15:18) Replicate 14 completed with 1.00e+05 of simulation time using 2 work units.
+2019-01-03 17:15:23) Replicate 3 completed with 1.00e+05 of simulation time using 2 work units.
+2019-01-03 17:15:27) Replicate 8 completed with 1.00e+05 of simulation time using 2 work units.
+2019-01-03 17:15:27) Replicate 1 completed with 1.00e+05 of simulation time using 3 work units.
+2019-01-03 17:15:27) Replicate 6 completed with 1.00e+05 of simulation time using 3 work units.
+2019-01-03 17:15:27) Replicate 13 completed with 1.00e+05 of simulation time using 3 work units.
+2019-01-03 17:15:27) Replicate 11 completed with 1.00e+05 of simulation time using 3 work units.
+2019-01-03 17:15:27) Replicate 12 completed with 1.00e+05 of simulation time using 3 work units.
+2019-01-03 17:15:27) Replicate 5 completed with 1.00e+05 of simulation time using 3 work units.
+2019-01-03 17:15:27) Replicate 7 completed with 1.00e+05 of simulation time using 3 work units.
+2019-01-03 17:15:27) Replicate 9 completed with 1.00e+05 of simulation time using 3 work units.
+2019-01-03 17:15:27) Replicate 2 completed with 1.00e+05 of simulation time using 3 work units.
+2019-01-03 17:15:27) Replicate supervisor finished 15 replicates in 1.449e+02 seconds.
+2019-01-03 17:15:27) Supervisor @6 finished.
+2019-01-03 17:15:27) Job finished.
+2019-01-03 17:15:27) Hypervisor @0 finished.
+2019-01-03 17:15:27) Work unit runner @5 finished.
+2019-01-03 17:15:27) OutputPerformanceSignaler @4 finished.
+2019-01-03 17:15:27) OutputWriter wrote 39 messages and 3828 bytes total.
+2019-01-03 17:15:27) OutputWriter::HelperThread @3 finished.
+2019-01-03 17:15:27) OutputWriter @3 flushing and closing.
+2019-01-03 17:15:27) OutputWriter @3 finished.
+2019-01-03 17:15:27) Resource controller @1 finished.
+2019-01-03 17:15:27) Finalizing communications library.
+2019-01-03 17:15:27) Program execution finished.
