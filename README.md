@@ -15,16 +15,13 @@ The codes for part 2) and 3) are stored in the subfolder “/Codes4Simulation”
 To reproduce our results, the following steps need to be done:
 
 * install the prerequisite packages/softwares for Lattice Microbes
-
 * compile Lattice Microbes 
-
-* generate the input file for simulation
-
+* generate the input file in SBML format
+* Convet the input file from SBML to binary format
 * run the simulation by Lattice Microbes 
+* analyze the simulation results in python
 
-* analyze the simulation results 
-
-# Installing Lattice Microbes
+# Compiling Lattice Microbes
 
 Lattice Microbes is a software package to efficiently sample trajectories from chemical master equations and reaction diffusion master equations using Gillespie algorithm. The input is a binary file that defines species (with their initial numbers) and the reactions between them (with the propensity function and the associated kinetic rates). The output is a binary file that samples the number of species at a given time interval. 
 
@@ -59,6 +56,10 @@ When all the dependencies are ready, run the following commands:
 `sudo cmake ..`
 
 `sudo make -j 8`
+
+After the compilation is done, the following executable files should be found under build/utils/c:
+- lm_sbml_import: 
+- 
 
 # Generate problem-specific models
 
