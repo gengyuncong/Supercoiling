@@ -47,10 +47,8 @@ To use Lattice Microbes, several external packages should be installed:
 - openssl
 - protobuf
 - ffmpeg
-- Protocol Buffers v2.4.1
-- lxml 3.2.4+
 
-Most of the packages could be installed via brew/get-apt. 
+Most of the packages should be readily installed via brew/get-apt without specific notation. 
 
 When all the dependencies are ready, run the following commands:
 
