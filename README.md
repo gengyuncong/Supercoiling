@@ -10,19 +10,19 @@ It can be divided into three parts:
 
 3) the codes for analyzing the simulation results
 
-The codes for part 2) and 3) is stored in the subfolder “/Codes4Simulation”. Other parts of the folder are all source codes for Lattice Microbes. 
+The codes for part 2) and 3) are stored in the subfolder “/Codes4Simulation”. Other parts of the folder are all source codes for Lattice Microbes. 
 
 To reproduce our results, the following steps need to be done:
 
-1) install the prerequisite packages/softwares for Lattice Microbes
+* install the prerequisite packages/softwares for Lattice Microbes
 
-2) compile Lattice Microbes 
+* compile Lattice Microbes 
 
-3) generate the input file for simulation
+* generate the input file for simulation
 
-4) run the simulation by Lattice Microbes 
+* run the simulation by Lattice Microbes 
 
-5) analyze the simulation results 
+* analyze the simulation results 
 
 # Installing Lattice Microbes
 
@@ -38,10 +38,10 @@ To use Lattice Microbes, several external packages should be installed:
     - scikit-image
     - h5py
 - Git: [https://github.com/git-guides/install-git](https://github.com/git-guides/install-git)
-- g++
+- g++: [https://gcc.gnu.org/](https://gcc.gnu.org/)
 - Cmake: [https://cmake.org/install/](https://cmake.org/install/)
 - libSBML-5.18.0: [https://sourceforge.net/projects/sbml/files/libsbml/5.18.0/stable/](https://sourceforge.net/projects/sbml/files/libsbml/5.18.0/stable/)
-- hdf5:
+- hdf5
 - snappy
 - libxml2
 - openssl
