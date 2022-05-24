@@ -59,8 +59,9 @@ When all the dependencies are ready, run the following commands:
 `sudo make -j 8`
 
 After the compilation is done, the following executable files should be found under build/utils/c:
-- lm_sbml_import: 
-- 
+- build/utils/c/lm_sbml_import: the tool to convert SBML model file to binary file (which is understandable by Lattice Microbes)
+- build/utils/c/lm_setp: the tool to specify the simulation time and the time interval to record the trajectories
+- build/lmes: the main program to perform stochastic simulation
 
 # Generate problem-specific models
 
