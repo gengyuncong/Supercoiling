@@ -84,7 +84,7 @@ For each phenomenon, we build a specific model, described by a specific set of m
 
 # 3. Running the simulation
 
-Given a specific model, the following step needs to be done:
+Given a specific model, the following steps need to be done:
 
  1) convert the model file in smbl format (say, "myfile.sbml") to binary format (say, "myfile.lm"):
 
@@ -101,4 +101,4 @@ Given a specific model, the following step needs to be done:
 
 # 4. Analyzing results
 
-The result analysis is performed in python. The "h5py" module is needed to read the binary output file from Lattice Microbe. The codes for result analysis is simply deposited in the corresponding model 
+The result analysis is performed in python. The "h5py" module is needed to read the binary output file from Lattice Microbe. The codes for result analysis is simply stored in the corresponding model. 
