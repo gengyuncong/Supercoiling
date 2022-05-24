@@ -87,13 +87,16 @@ For each phenomenon, we build a specific model, described by a specific set of m
 Given a specific model, the following step needs to be done:
 
  1) convert the model file in smbl format (say, "myfile.sbml") to binary format (say, "myfile.lm"):
- `./lm_sbml_import myfile.lm myfile.sbml`
+
+`./lm_sbml_import myfile.lm myfile.sbml`
  
  2) specify the time to simulate (for example, 2000) and sampling interval (for example, 1), both in sec:
- `./lm_setp myfile.lm maxTime=2000 writeInterval=$interval`
+
+`./lm_setp myfile.lm maxTime=2000 writeInterval=$interval`
  
  3) specify the number of replicates and run:
- `./lmes -r 1-1000 -f myfile.lm `
+
+`./lmes -r 1-1000 -f myfile.lm `
 
 
 # 4. Analyzing results
