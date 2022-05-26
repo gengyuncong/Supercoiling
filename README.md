@@ -86,15 +86,15 @@ We also compared the results from two different model schemes:
 
 For each of the four topics, we build a specific model, described by a specific set of species and reactions. The codes for simulating each system is stored in a separate subfolder under “/Codes4Simulation”. 
 
--**/Codes4Simulation**
+`-/Codes4Simulation`
 
--- **1_RNAP_Cooperation**: corresponding to models used in section **"RNAP Translocation-induced supercoiling mediates the collective behaviors of co-transcribing RNAP molecules"** and **"The cooperative behavior requires fast Topo I unbinding and moderate supercoiling diffusion rates"**
+`-- /1_RNAP_Cooperation`: corresponding to models used in section **"RNAP Translocation-induced supercoiling mediates the collective behaviors of co-transcribing RNAP molecules"** and **"The cooperative behavior requires fast Topo I unbinding and moderate supercoiling diffusion rates"**
 
--- **2_Transcription_bursting**: corresponding to models used in section **"Supercoiling accumulated in a topological domain modulates transcriptional noise"**
+`-- /2_Transcription_bursting`: corresponding to models used in section **"Supercoiling accumulated in a topological domain modulates transcriptional noise"**
 
--- **3_Two_genes**: corresponding to the model used in section **"Intergenic supercoiling mediates communication between two neighboring genes"**
+`-- /3_Two_genes`: corresponding to the model used in section **"Intergenic supercoiling mediates communication between two neighboring genes"**
 
--- **4_Biased_versus_unbiased_random_walk**: corresponding to the model mentioned in the discussion section
+`-- /4_Biased_versus_unbiased_random_walk`: corresponding to the model mentioned in the discussion section
 
 To generate the model in sbml format, simply run `python simul*.py *ARGV`. The detailed usage is in the "readme.txt" file under each subfolder. 
 
