@@ -80,7 +80,16 @@ In the manuscript “**A spatially resolved stochastic model reveals the role of
 
 3) the interaction between the two genes at the multi-gene transcription level
 
-For each phenomenon, we build a specific model, described by a specific set of master equations. The model for each system is stored in a separate subfolder under “/Codes4Simulation”. 
+We also compared the results from two different model schemes: 
+
+4) explicit random walk versus biased random walk
+
+For each of the four topics, we build a specific model, described by a specific set of master equations. The codes for simulating each system is stored in a separate subfolder under “/Codes4Simulation”. 
+-/Codes4Simulation
+-- 1_RNAP_Cooperation
+-- 2_Transcription_bursting
+-- 3_Two_genes
+-- 4_Biased_versus_unbiased_random_walk
 
 # 3. Running the simulation
 
