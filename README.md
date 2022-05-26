@@ -88,11 +88,11 @@ For each of the four topics, we build a specific model, described by a specific 
 
 -**/Codes4Simulation**
 
--- **1_RNAP_Cooperation**: corresponding to result section *RNAP Translocation-induced supercoiling mediates the collective behaviors of co-transcribing RNAP molecules* and *The cooperative behavior requires fast Topo I unbinding and moderate supercoiling diffusion rates*
+-- **1_RNAP_Cooperation**: corresponding to result section *"RNAP Translocation-induced supercoiling mediates the collective behaviors of co-transcribing RNAP molecules"* and *"The cooperative behavior requires fast Topo I unbinding and moderate supercoiling diffusion rates"*
 
--- **2_Transcription_bursting**: corresponding to result section *Supercoiling accumulated in a topological domain modulates transcriptional noise*
+-- **2_Transcription_bursting**: corresponding to result section *"Supercoiling accumulated in a topological domain modulates transcriptional noise"*
 
--- **3_Two_genes**: corresponding to result section *Intergenic supercoiling mediates communication between two neighboring genes*
+-- **3_Two_genes**: corresponding to result section *"Intergenic supercoiling mediates communication between two neighboring genes"*
 
 -- **4_Biased_versus_unbiased_random_walk**: corresponding to the discussion section
 
