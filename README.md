@@ -88,13 +88,13 @@ For each of the four topics, we build a specific model, described by a specific 
 
 -**/Codes4Simulation**
 
--- **1_RNAP_Cooperation**: corresponding to Fig2, Fig3, S3-S9 in the manuscript
+-- **1_RNAP_Cooperation**: corresponding to result section "RNAP Translocation-induced supercoiling mediates the collective behaviors of co-transcribing RNAP molecules" and "The cooperative behavior requires fast Topo I unbinding and moderate supercoiling diffusion rates"
 
--- **2_Transcription_bursting**: corresponding to Fig4, S10-S11 in the manuscript
+-- **2_Transcription_bursting**: corresponding to result section "Supercoiling accumulated in a topological domain modulates transcriptional noise"
 
--- **3_Two_genes**: corresponding to Fig5, Fig6, S12 in the manuscript
+-- **3_Two_genes**: corresponding to result section "Intergenic supercoiling mediates communication between two neighboring genes"
 
--- **4_Biased_versus_unbiased_random_walk**: corresponding to S13 in the manuscript
+-- **4_Biased_versus_unbiased_random_walk**: corresponding to the discussion section
 
 To generate the model in sbml format, simply run `python simul*.py *ARGV`. The detailed usage is in the "readme.txt" file under each subfolder. 
 
@@ -117,4 +117,13 @@ Given a specific model file in sbml, the following steps need to be done:
 
 # 4. Analyzing results
 
-The result analysis is performed in python. The "h5py" module is needed to read the binary output file from Lattice Microbe. The codes for result analysis is simply stored in the corresponding model. 
+The result analysis is performed in python. The "h5py" module is needed to read the binary output file from Lattice Microbe. The codes for result analysis is simply stored in the subfolders of the corresponding model. The filenames for plot generating codes start with "plot_". 
+-**/Codes4Simulation**
+
+-- **1_RNAP_Cooperation**: corresponding to Fig2, Fig3, S3-S9 in the manuscript
+
+-- **2_Transcription_bursting**: corresponding to Fig4, S10-S11 in the manuscript
+
+-- **3_Two_genes**: corresponding to Fig5, Fig6, S12 in the manuscript
+
+-- **4_Biased_versus_unbiased_random_walk**: corresponding to S13 in the manuscript
