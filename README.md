@@ -82,7 +82,7 @@ In the manuscript “**A spatially resolved stochastic model reveals the role of
 
 We also compared the results from two different model schemes: 
 
-4) explicit random walk versus biased random walk
+4) biased random walk versus unbiased (explicit) random walk
 
 For each of the four topics, we build a specific model, described by a specific set of species and reactions. The codes for simulating each system is stored in a separate subfolder under “/Codes4Simulation”. 
 
