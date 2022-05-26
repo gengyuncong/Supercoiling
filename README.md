@@ -16,7 +16,7 @@ To reproduce our results, the following steps need to be done:
 
 1) install the prerequisite packages/softwares for Lattice Microbes and compile Lattice Microbes 
 
-2) generate the input model in (SBML) format [Systems Biology Markup Language (SBML)](https://synonym.caltech.edu/)
+2) generate the input model in SBML format ([Systems Biology Markup Language (SBML)](https://synonym.caltech.edu/))
 
 3) convet the input file from SBML to binary format, and run the simulation by Lattice Microbes
 
