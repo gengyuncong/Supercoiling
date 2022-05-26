@@ -96,7 +96,7 @@ For each of the four topics, we build a specific model, described by a specific 
 
 -- 4_Biased_versus_unbiased_random_walk
 
-To generate the model in sbml format, simply run `python \*.py *ARGV`. The detailed usage is in the "readme.txt" file under each subfolder. 
+To generate the model in sbml format, simply run `python simul*.py *ARGV`. The detailed usage is in the "readme.txt" file under each subfolder. 
 
 # 3. Running the simulation
 
