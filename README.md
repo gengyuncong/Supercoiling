@@ -86,15 +86,15 @@ We also compared the results from two different model schemes:
 
 For each of the four topics, we build a specific model, described by a specific set of species and reactions. The codes for simulating each system is stored in a separate subfolder under “/Codes4Simulation”. 
 
--/Codes4Simulation
+-**/Codes4Simulation**
 
--- 1_RNAP_Cooperation
+-- **1_RNAP_Cooperation**: corresponding to Fig2, Fig3, S3-S9 in the manuscript
 
--- 2_Transcription_bursting
+-- **2_Transcription_bursting**: corresponding to Fig4, S10-S11 in the manuscript
 
--- 3_Two_genes
+-- **3_Two_genes**: corresponding to Fig5, Fig6, S12 in the manuscript
 
--- 4_Biased_versus_unbiased_random_walk
+-- **4_Biased_versus_unbiased_random_walk**: corresponding to S13 in the manuscript
 
 To generate the model in sbml format, simply run `python simul*.py *ARGV`. The detailed usage is in the "readme.txt" file under each subfolder. 
 
