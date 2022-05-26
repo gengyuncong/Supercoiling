@@ -100,9 +100,9 @@ To generate the model in sbml format, simply run `python simul*.py *ARGV`. The d
 
 # 3. Running the simulation
 
-Given a specific model, the following steps need to be done:
+Given a specific model file in sbml, the following steps need to be done:
 
- 1) convert the model file in smbl format (say, "myfile.sbml") to binary format (say, "myfile.lm"):
+ 1) convert the model file from smbl format (say, "myfile.sbml") to binary format (say, "myfile.lm"):
 
 `./lm_sbml_import myfile.lm myfile.sbml`
  
