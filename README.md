@@ -84,7 +84,7 @@ We also compared the results from two different model schemes:
 
 4) explicit random walk versus biased random walk
 
-For each of the four topics, we build a specific model, described by a specific set of master equations. The codes for simulating each system is stored in a separate subfolder under “/Codes4Simulation”. 
+For each of the four topics, we build a specific model, described by a specific set of species and reactions. The codes for simulating each system is stored in a separate subfolder under “/Codes4Simulation”. 
 
 -/Codes4Simulation
 
@@ -95,6 +95,8 @@ For each of the four topics, we build a specific model, described by a specific 
 -- 3_Two_genes
 
 -- 4_Biased_versus_unbiased_random_walk
+
+To generate the model in sbml format, simply run `python \*.py *ARGV`. The detailed usage is in the "readme.txt" file under each subfolder. 
 
 # 3. Running the simulation
 
