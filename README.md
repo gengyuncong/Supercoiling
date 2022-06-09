@@ -108,9 +108,9 @@ Given a specific model file in sbml, the following steps need to be done:
  
  2) specify the time to simulate (for example, 2000) and sampling interval (for example, 1), both in sec:
 
-`./lm_setp myfile.lm maxTime=2000 writeInterval=$interval`
+`./lm_setp myfile.lm maxTime=2000 writeInterval=1`
  
- 3) specify the number of replicates and run:
+ 3) specify the number of replicates (say, 1000) and run:
 
 `./lmes -r 1-1000 -f myfile.lm `
 
@@ -127,3 +127,9 @@ The result analysis is performed in python. The "h5py" module is needed to read 
 -- **3_Two_genes**: corresponding to Fig5, Fig6, S12 in the manuscript
 
 -- **4_Biased_versus_unbiased_random_walk**: corresponding to S13 in the manuscript
+
+# References
+
+[1] Geng Y, Bohrer CH, Yehya N, Hendrix H, Shachaf L, Liu J, Xiao J, Roberts E. A spatial stochastic model reveals the role of supercoiling in transcription regulation. bioRxiv. 2021 Jan 1.
+
+[2] Roberts E, Stone JE, Luthey‐Schulten Z. Lattice microbes: High‐performance stochastic simulation method for the reaction‐diffusion master equation. Journal of computational chemistry. 2013 Jan 30;34(3):245-55.
